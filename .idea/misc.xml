@@ -34,5 +34,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11.0.2" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/../Ray-" />
+  </component>
 </project>
