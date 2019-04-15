@@ -181,10 +181,12 @@ public class Scene {
     private Vec calcColor(Ray ray, int recusionLevel) {
         // TODO: Implement this method.
         //       This is the recursive method in RayTracing.
+        if (recusionLevel >= maxRecursionLevel) {
+            return new Vec();
+        }
         Hit closetHit = findMinIntersection(ray);
         // in case no intersections was found
         if (closetHit == null) return backgroundColor;
-
         // get the hitting point
         Point hittingPoint = ray.getHittingPoint(closetHit);
         // get the working surface
@@ -201,10 +203,28 @@ public class Scene {
         }
         if (renderReflections) {
             // TODO:
+            Vec N = closetHit.getNormalToSurface();
+            Vec L = ray.direction();
+            // get the reflection vector direction
+            Vec reflectedDirection = Ops.reflect(L, N);
+            Ray reflectedRay = new Ray(hittingPoint, reflectedDirection;
+            // the reflection coefficient for the material
+            double K_R = hittingSurface.reflectionIntensity();
+            // recursive call calcColor for the reflected ray
+            Vec reflectedColor = calcColor(reflectedRay, recusionLevel + 1).mult(new Vec(K_R));
+            color = color.add(reflectedColor);
         }
-
         if (renderRefarctions) {
             // TODO:
+            Vec refractionColor = new Vec();
+            if (surface.isTransparent()) {
+                double n1 = surface.n1(minHit);
+                double n2 = surface.n2(minHit);
+                Vec refractionDirection = Ops.refract(ray.direction(), minHit.getNormalToSurface(), n1, n2);
+                Vec refractionWeight = new Vec(surface.refractionIntensity());
+                refractionColor = this.calcColor(new Ray(hittingPoint, refractionDirection), recusionLevel + 1).mult(refractionWeight);
+                color = color.add(refractionColor);
+            }
         }
         return color;
     }
@@ -280,7 +300,6 @@ public class Scene {
     }
 
     /**
-     *
      * @param light
      * @param rayToLight
      * @return true if occluded
