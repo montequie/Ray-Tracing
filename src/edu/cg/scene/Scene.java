@@ -194,13 +194,19 @@ public class Scene {
         color.add(calcAmbientColor(hittingSurface));
         for (Light l : lightSources) {
             Ray rayToLight = l.rayToLight(hittingPoint);
-            // is occluded
-            color.add(calcDiffuseColor(closetHit, rayToLight));
-            color.add(calcSpecularColor(closetHit, rayToLight, ray));
+            if (!isOccluded(l, rayToLight)) {
+                color.add(calcDiffuseColor(closetHit, rayToLight).mult(l.intensity(hittingPoint, rayToLight)));
+                color.add(calcSpecularColor(closetHit, rayToLight, ray).mult(l.intensity(hittingPoint, rayToLight)));
+            }
+        }
+        if (renderReflections) {
+            // TODO:
         }
 
-        // calc the pixel color of the intersection point
-        throw new UnimplementedMethodException("calcColor");
+        if (renderRefarctions) {
+            // TODO:
+        }
+        return color;
     }
 
 
@@ -219,32 +225,26 @@ public class Scene {
 
 
     /**
-     * represents light emanating directly from an object, I_E
+     * represents light emanating directly from an object
+     *
      * @param hittingPoint
      * @return
      */
-    private Vec calcEmissionColor(Point hittingPoint) {
-        Vec color = new Vec();
-        for (Light l : lightSources) {
-            Ray rayToLight = l.rayToLight(hittingPoint);
-            if (!this.isOccluded(l, rayToLight)){
-                l.intensity()
-            }
-        }
-        return color;
+    private Vec calcEmissionColor(Light l, Point hittingPoint, Ray rayToLight) {
+        // TODO: delete if not needed
+        throw new UnimplementedMethodException("calcEmissionColor");
     }
 
     /**
-     *
      * @param s - the surface
      * @return I_A * K_A
      */
     private Vec calcAmbientColor(Surface s) {
+        // Ka - the ambient part of the material
         return s.Ka().mult(ambient);
     }
 
     /**
-     *
      * @param closetHit
      * @param rayToLight
      * @return the diffuse reflection component of the light source, the amount of light that bounces
@@ -259,7 +259,6 @@ public class Scene {
     }
 
     /**
-     *
      * @param closetHit
      * @param rayToLight
      * @param viewpointRay - the ray from the camera
@@ -280,10 +279,15 @@ public class Scene {
         return K_s.mult(Math.pow(R.dot(V.neg()), n));
     }
 
+    /**
+     *
+     * @param light
+     * @param rayToLight
+     * @return true if occluded
+     */
     private boolean isOccluded(Light light, Ray rayToLight) {
         for (Surface surface : surfaces) {
-            if (!light.isOccludedBy(surface, rayToLight)) continue;
-            return true;
+            if (light.isOccludedBy(surface, rayToLight)) return true;
         }
         return false;
     }
