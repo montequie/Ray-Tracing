@@ -11,10 +11,7 @@ import java.util.concurrent.Future;
 
 import edu.cg.Logger;
 import edu.cg.UnimplementedMethodException;
-import edu.cg.algebra.Hit;
-import edu.cg.algebra.Point;
-import edu.cg.algebra.Ray;
-import edu.cg.algebra.Vec;
+import edu.cg.algebra.*;
 import edu.cg.scene.camera.PinholeCamera;
 import edu.cg.scene.lightSources.Light;
 import edu.cg.scene.objects.Surface;
@@ -184,17 +181,23 @@ public class Scene {
     private Vec calcColor(Ray ray, int recusionLevel) {
         // TODO: Implement this method.
         //       This is the recursive method in RayTracing.
-        Vec color = new Vec();
         Hit closetHit = findMinIntersection(ray);
         // in case no intersections was found
         if (closetHit == null) return backgroundColor;
 
         // get the hitting point
-        Point p = ray.getHittingPoint(closetHit);
+        Point hittingPoint = ray.getHittingPoint(closetHit);
         // get the working surface
-        Surface s = closetHit.getSurface();
+        Surface hittingSurface = closetHit.getSurface();
 
-        color.add(calcAmbientColor(s));
+        Vec color = new Vec();
+        color.add(calcAmbientColor(hittingSurface));
+        for (Light l : lightSources) {
+            Ray rayToLight = l.rayToLight(hittingPoint);
+            // is occluded
+            color.add(calcDiffuseColor(closetHit, rayToLight));
+            color.add(calcSpecularColor(closetHit, rayToLight, ray));
+        }
 
         // calc the pixel color of the intersection point
         throw new UnimplementedMethodException("calcColor");
@@ -214,7 +217,12 @@ public class Scene {
         return closetHit;
     }
 
-    // represents light emanating directly from an object, I_E
+
+    /**
+     * represents light emanating directly from an object, I_E
+     * @param hittingPoint
+     * @return
+     */
     private Vec calcEmissionColor(Point hittingPoint) {
         Vec color = new Vec();
         for (Light l : lightSources) {
@@ -226,16 +234,50 @@ public class Scene {
         return color;
     }
 
+    /**
+     *
+     * @param s - the surface
+     * @return I_A * K_A
+     */
     private Vec calcAmbientColor(Surface s) {
         return s.Ka().mult(ambient);
     }
 
-    private Vec calcDiffuseColor() {
-        return null;
+    /**
+     *
+     * @param closetHit
+     * @param rayToLight
+     * @return the diffuse reflection component of the light source, the amount of light that bounces
+     * back | I_D = K_D * (N^ . L^) . I_L
+     */
+    private Vec calcDiffuseColor(Hit closetHit, Ray rayToLight) {
+        Vec N = closetHit.getNormalToSurface();
+        Vec L = rayToLight.direction();
+        // surface’s coefficient of diffuse reflection
+        Vec K_d = closetHit.getSurface().Kd();
+        return K_d.mult(Math.max(N.dot(L), 0.0));
     }
 
-    private Vec calcSpecularColor() {
-        return null;
+    /**
+     *
+     * @param closetHit
+     * @param rayToLight
+     * @param viewpointRay - the ray from the camera
+     * @return the specular component of the light source
+     */
+    private Vec calcSpecularColor(Hit closetHit, Ray rayToLight, Ray viewpointRay) {
+        Vec N = closetHit.getNormalToSurface();
+        Vec L = rayToLight.direction();
+        // the mirror reflection of the light vector off the surface
+        Vec R = Ops.reflect(L.neg(), N);
+        Vec V = viewpointRay.direction();
+        // surface’s coefficient of specular reflection
+        Vec K_s = closetHit.getSurface().Ks();
+        // n defines the shininess constant for this material.
+        int n = closetHit.getSurface().shininess();
+        double VR = R.dot(V.neg());
+        // TODO: if VR < 0.0
+        return K_s.mult(Math.pow(R.dot(V.neg()), n));
     }
 
     private boolean isOccluded(Light light, Ray rayToLight) {
