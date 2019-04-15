@@ -1,0 +1,4955 @@
+{
+  "name": "Scene4",
+  "maxRecursionLevel": 6,
+  "antiAliasingFactor": 1,
+  "renderRefarctions": true,
+  "renderReflections": true,
+  "camera": {
+    "cameraPosition": {
+      "x": 50.0,
+      "y": 50.0,
+      "z": 4.0
+    },
+    "centerPoint": {
+      "x": 37.480015974451085,
+      "y": 37.480015974451085,
+      "z": 4.0
+    },
+    "towardsVec": {
+      "x": -0.7071067811865475,
+      "y": -0.7071067811865475,
+      "z": 0.0
+    },
+    "upVec": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0
+    },
+    "rightVec": {
+      "x": -0.7071067811865476,
+      "y": 0.7071067811865476,
+      "z": 0.0
+    },
+    "viewPlainWidth": 2.0,
+    "distanceToPlain": 17.705931209625774,
+    "resX": 200.0,
+    "resY": 200.0,
+    "pixelRatio": 0.0
+  },
+  "ambient": {
+    "x": 0.33,
+    "y": 0.33,
+    "z": 0.33
+  },
+  "backgroundColor": {
+    "x": 0.0,
+    "y": 0.5,
+    "z": 1.0
+  },
+  "lightSources": [
+    {
+      "CLASSNAME": "edu.cg.scene.lightSources.DirectionalLight",
+      "DATA": {
+        "direction": {
+          "x": -0.4082482904638631,
+          "y": -0.4082482904638631,
+          "z": -0.8164965809277261
+        },
+        "intensity": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        }
+      }
+    },
+    {
+      "CLASSNAME": "edu.cg.scene.lightSources.PointLight",
+      "DATA": {
+        "position": {
+          "x": 12.0,
+          "y": 4.0,
+          "z": 6.0
+        },
+        "kq": 0.01,
+        "kl": 0.1,
+        "kc": 1.0,
+        "intensity": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      }
+    },
+    {
+      "CLASSNAME": "edu.cg.scene.lightSources.PointLight",
+      "DATA": {
+        "position": {
+          "x": 4.0,
+          "y": 12.0,
+          "z": 6.0
+        },
+        "kq": 0.01,
+        "kl": 0.1,
+        "kc": 1.0,
+        "intensity": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      }
+    },
+    {
+      "CLASSNAME": "edu.cg.scene.lightSources.PointLight",
+      "DATA": {
+        "position": {
+          "x": -12.0,
+          "y": -20.0,
+          "z": 6.0
+        },
+        "kq": 0.01,
+        "kl": 0.1,
+        "kc": 1.0,
+        "intensity": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      }
+    }
+  ],
+  "surfaces": [
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "name": "Box 7"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.3846364781453363,
+          "y": 0.2714451740539079,
+          "z": 0.3693764908764948
+        },
+        "Kd": {
+          "x": 0.3846364781453363,
+          "y": 0.2714451740539079,
+          "z": 0.3693764908764948
+        },
+        "Ks": {
+          "x": 0.33616213713151155,
+          "y": 0.33616213713151155,
+          "z": 0.33616213713151155
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.28964371480601553,
+        "refractionIndex": 1.3763320833292831
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 1.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "name": "Box 8"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6311342465091653,
+          "y": 0.511253922985763,
+          "z": 0.39587742595915254
+        },
+        "Kd": {
+          "x": 0.6311342465091653,
+          "y": 0.511253922985763,
+          "z": 0.39587742595915254
+        },
+        "Ks": {
+          "x": 0.4558660972838132,
+          "y": 0.4558660972838132,
+          "z": 0.4558660972838132
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 1.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "name": "Box 9"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.026667009141699394,
+          "y": 0.5208036908898567,
+          "z": 0.8526243028218738
+        },
+        "Kd": {
+          "x": 0.026667009141699394,
+          "y": 0.5208036908898567,
+          "z": 0.8526243028218738
+        },
+        "Ks": {
+          "x": 0.4839318653559014,
+          "y": 0.4839318653559014,
+          "z": 0.4839318653559014
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 0.0,
+            "y": 3.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 1.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "name": "Box 10"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.33729834674794035,
+          "y": 0.8715227145707727,
+          "z": 0.7928806669729581
+        },
+        "Kd": {
+          "x": 0.33729834674794035,
+          "y": 0.8715227145707727,
+          "z": 0.7928806669729581
+        },
+        "Ks": {
+          "x": 0.247247668081649,
+          "y": 0.247247668081649,
+          "z": 0.247247668081649
+        },
+        "reflectionIntensity": 0.4726847159763678,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.20406785269993044,
+        "refractionIndex": 1.6033697627037846
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 0.0,
+            "y": 4.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 1.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "name": "Box 11"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1668560462658144,
+          "y": 0.41750552466617763,
+          "z": 0.7489383935130868
+        },
+        "Kd": {
+          "x": 0.1668560462658144,
+          "y": 0.41750552466617763,
+          "z": 0.7489383935130868
+        },
+        "Ks": {
+          "x": 0.12272403404232135,
+          "y": 0.12272403404232135,
+          "z": 0.12272403404232135
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 0.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 1.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "name": "Box 12"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.9757555288694622,
+          "y": 0.9276454343310953,
+          "z": 0.8912396522003172
+        },
+        "Kd": {
+          "x": 0.9757555288694622,
+          "y": 0.9276454343310953,
+          "z": 0.8912396522003172
+        },
+        "Ks": {
+          "x": 0.319556161060254,
+          "y": 0.319556161060254,
+          "z": 0.319556161060254
+        },
+        "reflectionIntensity": 0.15325714803316864,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.23676350862514473,
+        "refractionIndex": 1.7983348195422453
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 0.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 1.0,
+            "y": 7.0,
+            "z": 1.0
+          },
+          "name": "Box 13"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.3533835858033334,
+          "y": 0.05028551447990115,
+          "z": 0.5559835590067685
+        },
+        "Kd": {
+          "x": 0.3533835858033334,
+          "y": 0.05028551447990115,
+          "z": 0.5559835590067685
+        },
+        "Ks": {
+          "x": 0.05537032101757999,
+          "y": 0.05537032101757999,
+          "z": 0.05537032101757999
+        },
+        "reflectionIntensity": 0.2821416342919106,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.49828587415929165,
+        "refractionIndex": 1.6747218809059787
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 0.0,
+            "y": 7.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 1.0,
+            "y": 8.0,
+            "z": 1.0
+          },
+          "name": "Box 14"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.20772774219873524,
+          "y": 0.2116221150682871,
+          "z": 0.3010114450378326
+        },
+        "Kd": {
+          "x": 0.20772774219873524,
+          "y": 0.2116221150682871,
+          "z": 0.3010114450378326
+        },
+        "Ks": {
+          "x": 0.2730307529800996,
+          "y": 0.2730307529800996,
+          "z": 0.2730307529800996
+        },
+        "reflectionIntensity": 0.48165124485864014,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.47368464503861984,
+        "refractionIndex": 1.1428239744132052
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "name": "Box 15"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5207984829546869,
+          "y": 0.5137038449316882,
+          "z": 0.8304061884509679
+        },
+        "Kd": {
+          "x": 0.5207984829546869,
+          "y": 0.5137038449316882,
+          "z": 0.8304061884509679
+        },
+        "Ks": {
+          "x": 0.2093693744587739,
+          "y": 0.2093693744587739,
+          "z": 0.2093693744587739
+        },
+        "reflectionIntensity": 0.10190580079336725,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.47990873644904225,
+        "refractionIndex": 1.77435017240385
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "name": "Box 16"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.3323951918614807,
+          "y": 0.028329400885484857,
+          "z": 0.7091284627989937
+        },
+        "Kd": {
+          "x": 0.3323951918614807,
+          "y": 0.028329400885484857,
+          "z": 0.7091284627989937
+        },
+        "Ks": {
+          "x": 0.4611639812689416,
+          "y": 0.4611639812689416,
+          "z": 0.4611639812689416
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "name": "Box 17"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.009118253697123824,
+          "y": 0.2311979510939326,
+          "z": 0.7653645447292541
+        },
+        "Kd": {
+          "x": 0.009118253697123824,
+          "y": 0.2311979510939326,
+          "z": 0.7653645447292541
+        },
+        "Ks": {
+          "x": 0.405933298169462,
+          "y": 0.405933298169462,
+          "z": 0.405933298169462
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 3.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "name": "Box 18"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8453013955615188,
+          "y": 0.48972976724101347,
+          "z": 0.18352938710101974
+        },
+        "Kd": {
+          "x": 0.8453013955615188,
+          "y": 0.48972976724101347,
+          "z": 0.18352938710101974
+        },
+        "Ks": {
+          "x": 0.004649291626436514,
+          "y": 0.004649291626436514,
+          "z": 0.004649291626436514
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.3513374309376514,
+        "refractionIndex": 1.604291714993992
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 4.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "name": "Box 19"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.015349970782843614,
+          "y": 0.5341071615858057,
+          "z": 0.5537652945888806
+        },
+        "Kd": {
+          "x": 0.015349970782843614,
+          "y": 0.5341071615858057,
+          "z": 0.5537652945888806
+        },
+        "Ks": {
+          "x": 0.2619901282508409,
+          "y": 0.2619901282508409,
+          "z": 0.2619901282508409
+        },
+        "reflectionIntensity": 0.12272623015405582,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.17378284455290666,
+        "refractionIndex": 1.124527366708763
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "name": "Box 20"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.12289891538556696,
+          "y": 0.7291111772374206,
+          "z": 0.04956398059528233
+        },
+        "Kd": {
+          "x": 0.12289891538556696,
+          "y": 0.7291111772374206,
+          "z": 0.04956398059528233
+        },
+        "Ks": {
+          "x": 0.2954920963426572,
+          "y": 0.2954920963426572,
+          "z": 0.2954920963426572
+        },
+        "reflectionIntensity": 0.03446624307599594,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.4054806902956058,
+        "refractionIndex": 1.5712280439830173
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 7.0,
+            "z": 1.0
+          },
+          "name": "Box 21"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.17938824081638638,
+          "y": 0.04332854289192334,
+          "z": 0.6913279929410113
+        },
+        "Kd": {
+          "x": 0.17938824081638638,
+          "y": 0.04332854289192334,
+          "z": 0.6913279929410113
+        },
+        "Ks": {
+          "x": 0.16381165464678993,
+          "y": 0.16381165464678993,
+          "z": 0.16381165464678993
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 7.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 8.0,
+            "z": 1.0
+          },
+          "name": "Box 22"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.830973611076075,
+          "y": 0.1406412285573665,
+          "z": 0.7206842821036166
+        },
+        "Kd": {
+          "x": 0.830973611076075,
+          "y": 0.1406412285573665,
+          "z": 0.7206842821036166
+        },
+        "Ks": {
+          "x": 0.14457680934143374,
+          "y": 0.14457680934143374,
+          "z": 0.14457680934143374
+        },
+        "reflectionIntensity": 0.18179513819892074,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "name": "Box 23"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.20710116867569572,
+          "y": 0.27008105005222827,
+          "z": 0.4368028694710653
+        },
+        "Kd": {
+          "x": 0.20710116867569572,
+          "y": 0.27008105005222827,
+          "z": 0.4368028694710653
+        },
+        "Ks": {
+          "x": 0.4393881628902204,
+          "y": 0.4393881628902204,
+          "z": 0.4393881628902204
+        },
+        "reflectionIntensity": 0.013508753278413832,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.10216827583425803,
+        "refractionIndex": 1.489433920659859
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "name": "Box 24"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8295654485319626,
+          "y": 0.8250313862349958,
+          "z": 0.42642288606390544
+        },
+        "Kd": {
+          "x": 0.8295654485319626,
+          "y": 0.8250313862349958,
+          "z": 0.42642288606390544
+        },
+        "Ks": {
+          "x": 0.12728923156588978,
+          "y": 0.12728923156588978,
+          "z": 0.12728923156588978
+        },
+        "reflectionIntensity": 0.3178490474643275,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.28793933698591806,
+        "refractionIndex": 1.4457703627052811
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "name": "Box 25"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8435389051291659,
+          "y": 0.507224346302353,
+          "z": 0.15841636406778303
+        },
+        "Kd": {
+          "x": 0.8435389051291659,
+          "y": 0.507224346302353,
+          "z": 0.15841636406778303
+        },
+        "Ks": {
+          "x": 0.05385562608987937,
+          "y": 0.05385562608987937,
+          "z": 0.05385562608987937
+        },
+        "reflectionIntensity": 0.04981455075328317,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 3.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "name": "Box 26"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7567954601096306,
+          "y": 0.45082175805420455,
+          "z": 0.6638652626481301
+        },
+        "Kd": {
+          "x": 0.7567954601096306,
+          "y": 0.45082175805420455,
+          "z": 0.6638652626481301
+        },
+        "Ks": {
+          "x": 0.40944423599814334,
+          "y": 0.40944423599814334,
+          "z": 0.40944423599814334
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "name": "Box 27"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.09606318629210653,
+          "y": 0.03585078915897344,
+          "z": 0.3089213749399372
+        },
+        "Kd": {
+          "x": 0.09606318629210653,
+          "y": 0.03585078915897344,
+          "z": 0.3089213749399372
+        },
+        "Ks": {
+          "x": 0.05456921356384037,
+          "y": 0.05456921356384037,
+          "z": 0.05456921356384037
+        },
+        "reflectionIntensity": 0.20430947489190898,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.22985917422795588,
+        "refractionIndex": 1.6036449622517965
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "name": "Box 28"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7548167487927412,
+          "y": 0.48858324046207713,
+          "z": 0.1991025893788445
+        },
+        "Kd": {
+          "x": 0.7548167487927412,
+          "y": 0.48858324046207713,
+          "z": 0.1991025893788445
+        },
+        "Ks": {
+          "x": 0.34620345543700426,
+          "y": 0.34620345543700426,
+          "z": 0.34620345543700426
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 7.0,
+            "z": 1.0
+          },
+          "name": "Box 29"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.3104176282343648,
+          "y": 0.2347021454837842,
+          "z": 0.7478750414644304
+        },
+        "Kd": {
+          "x": 0.3104176282343648,
+          "y": 0.2347021454837842,
+          "z": 0.7478750414644304
+        },
+        "Ks": {
+          "x": 0.1471231117002238,
+          "y": 0.1471231117002238,
+          "z": 0.1471231117002238
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.2661284611983297,
+        "refractionIndex": 1.6488737572883374
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 7.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 8.0,
+            "z": 1.0
+          },
+          "name": "Box 30"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8320611021055534,
+          "y": 0.29323363841561867,
+          "z": 0.8213955353251069
+        },
+        "Kd": {
+          "x": 0.8320611021055534,
+          "y": 0.29323363841561867,
+          "z": 0.8213955353251069
+        },
+        "Ks": {
+          "x": 0.2878593433504803,
+          "y": 0.2878593433504803,
+          "z": 0.2878593433504803
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.14093896619403462,
+        "refractionIndex": 1.0951813832098298
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "name": "Box 31"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8125246293097355,
+          "y": 0.4117921924727991,
+          "z": 0.8636979027191756
+        },
+        "Kd": {
+          "x": 0.8125246293097355,
+          "y": 0.4117921924727991,
+          "z": 0.8636979027191756
+        },
+        "Ks": {
+          "x": 0.26230300564850206,
+          "y": 0.26230300564850206,
+          "z": 0.26230300564850206
+        },
+        "reflectionIntensity": 0.02674652301291841,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "name": "Box 32"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "reflectionIntensity": 0.95,
+        "shininess": 11,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "name": "Box 33"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.785724978316079,
+          "y": 0.5153470148888561,
+          "z": 0.9661756886411743
+        },
+        "Kd": {
+          "x": 0.785724978316079,
+          "y": 0.5153470148888561,
+          "z": 0.9661756886411743
+        },
+        "Ks": {
+          "x": 0.19596513872638655,
+          "y": 0.19596513872638655,
+          "z": 0.19596513872638655
+        },
+        "reflectionIntensity": 0.4612230889580642,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 3.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "name": "Box 34"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.46308499739874087,
+          "y": 0.30952130217721197,
+          "z": 0.8199517866518189
+        },
+        "Kd": {
+          "x": 0.46308499739874087,
+          "y": 0.30952130217721197,
+          "z": 0.8199517866518189
+        },
+        "Ks": {
+          "x": 0.17854201150046078,
+          "y": 0.17854201150046078,
+          "z": 0.17854201150046078
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.260311957475377,
+        "refractionIndex": 1.1404536683032145
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 4.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "name": "Box 35"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "reflectionIntensity": 0.95,
+        "shininess": 4,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "name": "Box 36"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7889946666096838,
+          "y": 0.18533167533272643,
+          "z": 0.6922773167993929
+        },
+        "Kd": {
+          "x": 0.7889946666096838,
+          "y": 0.18533167533272643,
+          "z": 0.6922773167993929
+        },
+        "Ks": {
+          "x": 0.2608645298104225,
+          "y": 0.2608645298104225,
+          "z": 0.2608645298104225
+        },
+        "reflectionIntensity": 0.2732285000641337,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.1941244897940641,
+        "refractionIndex": 1.6548751481766888
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 7.0,
+            "z": 1.0
+          },
+          "name": "Box 37"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5484417145806488,
+          "y": 0.09376043062715533,
+          "z": 0.09542175423490973
+        },
+        "Kd": {
+          "x": 0.5484417145806488,
+          "y": 0.09376043062715533,
+          "z": 0.09542175423490973
+        },
+        "Ks": {
+          "x": 0.15271163124457948,
+          "y": 0.15271163124457948,
+          "z": 0.15271163124457948
+        },
+        "reflectionIntensity": 0.34964915840238275,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 7.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 8.0,
+            "z": 1.0
+          },
+          "name": "Box 38"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.15349661148728955,
+          "y": 0.5303310920078527,
+          "z": 0.060266387725238735
+        },
+        "Kd": {
+          "x": 0.15349661148728955,
+          "y": 0.5303310920078527,
+          "z": 0.060266387725238735
+        },
+        "Ks": {
+          "x": 0.49319928454074086,
+          "y": 0.49319928454074086,
+          "z": 0.49319928454074086
+        },
+        "reflectionIntensity": 0.3403981889297189,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.2576588205442527,
+        "refractionIndex": 1.361486260467832
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "name": "Box 39"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.10259048220858213,
+          "y": 0.47837098607275574,
+          "z": 0.7527657524361423
+        },
+        "Kd": {
+          "x": 0.10259048220858213,
+          "y": 0.47837098607275574,
+          "z": 0.7527657524361423
+        },
+        "Ks": {
+          "x": 0.31171053752861094,
+          "y": 0.31171053752861094,
+          "z": 0.31171053752861094
+        },
+        "reflectionIntensity": 0.0330529700850834,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.1179700851125941,
+        "refractionIndex": 1.3253988655059736
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "name": "Box 40"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.29246248020313637,
+          "y": 0.8145530852192306,
+          "z": 0.8391962861874022
+        },
+        "Kd": {
+          "x": 0.29246248020313637,
+          "y": 0.8145530852192306,
+          "z": 0.8391962861874022
+        },
+        "Ks": {
+          "x": 0.17361863988062615,
+          "y": 0.17361863988062615,
+          "z": 0.17361863988062615
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "name": "Box 41"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4144129491692303,
+          "y": 0.30775271853620045,
+          "z": 0.038338760107243575
+        },
+        "Kd": {
+          "x": 0.4144129491692303,
+          "y": 0.30775271853620045,
+          "z": 0.038338760107243575
+        },
+        "Ks": {
+          "x": 0.3906214688156879,
+          "y": 0.3906214688156879,
+          "z": 0.3906214688156879
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.14239503924440255,
+        "refractionIndex": 1.692551159559794
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 3.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "name": "Box 42"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.10169065610402173,
+          "y": 0.9699321473394504,
+          "z": 0.0410875188856753
+        },
+        "Kd": {
+          "x": 0.10169065610402173,
+          "y": 0.9699321473394504,
+          "z": 0.0410875188856753
+        },
+        "Ks": {
+          "x": 0.19747489051306016,
+          "y": 0.19747489051306016,
+          "z": 0.19747489051306016
+        },
+        "reflectionIntensity": 0.12626100837802828,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "name": "Box 43"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.29063835989743503,
+          "y": 0.7661388260559228,
+          "z": 0.29473572330930053
+        },
+        "Kd": {
+          "x": 0.29063835989743503,
+          "y": 0.7661388260559228,
+          "z": 0.29473572330930053
+        },
+        "Ks": {
+          "x": 0.22233971434927996,
+          "y": 0.22233971434927996,
+          "z": 0.22233971434927996
+        },
+        "reflectionIntensity": 0.038687945225586606,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "name": "Box 44"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8451561628178894,
+          "y": 0.4215730945999021,
+          "z": 0.5948914695020208
+        },
+        "Kd": {
+          "x": 0.8451561628178894,
+          "y": 0.4215730945999021,
+          "z": 0.5948914695020208
+        },
+        "Ks": {
+          "x": 0.30777321208595537,
+          "y": 0.30777321208595537,
+          "z": 0.30777321208595537
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.2242842598539816,
+        "refractionIndex": 1.4975540514724048
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 7.0,
+            "z": 1.0
+          },
+          "name": "Box 45"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7526075046707976,
+          "y": 0.9049061975456947,
+          "z": 0.30295568223422076
+        },
+        "Kd": {
+          "x": 0.7526075046707976,
+          "y": 0.9049061975456947,
+          "z": 0.30295568223422076
+        },
+        "Ks": {
+          "x": 0.11801742025833223,
+          "y": 0.11801742025833223,
+          "z": 0.11801742025833223
+        },
+        "reflectionIntensity": 0.22627986255341198,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 7.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 8.0,
+            "z": 1.0
+          },
+          "name": "Box 46"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5019432722713508,
+          "y": 0.9214896518810067,
+          "z": 0.8481267092318333
+        },
+        "Kd": {
+          "x": 0.5019432722713508,
+          "y": 0.9214896518810067,
+          "z": 0.8481267092318333
+        },
+        "Ks": {
+          "x": 0.20527976734812875,
+          "y": 0.20527976734812875,
+          "z": 0.20527976734812875
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "name": "Box 47"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6270825704115471,
+          "y": 0.13505356971883375,
+          "z": 0.9236963581830391
+        },
+        "Kd": {
+          "x": 0.6270825704115471,
+          "y": 0.13505356971883375,
+          "z": 0.9236963581830391
+        },
+        "Ks": {
+          "x": 0.2168644733384284,
+          "y": 0.2168644733384284,
+          "z": 0.2168644733384284
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "name": "Box 48"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.36662489956796773,
+          "y": 0.6320812132726156,
+          "z": 0.26691254123671027
+        },
+        "Kd": {
+          "x": 0.36662489956796773,
+          "y": 0.6320812132726156,
+          "z": 0.26691254123671027
+        },
+        "Ks": {
+          "x": 0.029452897814401247,
+          "y": 0.029452897814401247,
+          "z": 0.029452897814401247
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.42327543805945883,
+        "refractionIndex": 1.0019152442863926
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "name": "Box 49"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7710045476887355,
+          "y": 0.10432903915725522,
+          "z": 0.7288021720857536
+        },
+        "Kd": {
+          "x": 0.7710045476887355,
+          "y": 0.10432903915725522,
+          "z": 0.7288021720857536
+        },
+        "Ks": {
+          "x": 0.32524059238771796,
+          "y": 0.32524059238771796,
+          "z": 0.32524059238771796
+        },
+        "reflectionIntensity": 0.07047993237560296,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.18105444406732712,
+        "refractionIndex": 1.7808348284991724
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 3.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "name": "Box 50"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.9557663742993753,
+          "y": 0.915329828728828,
+          "z": 0.22225597802632646
+        },
+        "Kd": {
+          "x": 0.9557663742993753,
+          "y": 0.915329828728828,
+          "z": 0.22225597802632646
+        },
+        "Ks": {
+          "x": 0.35894199630576085,
+          "y": 0.35894199630576085,
+          "z": 0.35894199630576085
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 4.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "name": "Box 51"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5858918817364245,
+          "y": 0.38737961350250694,
+          "z": 0.2775920518736684
+        },
+        "Kd": {
+          "x": 0.5858918817364245,
+          "y": 0.38737961350250694,
+          "z": 0.2775920518736684
+        },
+        "Ks": {
+          "x": 0.05878441574294335,
+          "y": 0.05878441574294335,
+          "z": 0.05878441574294335
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "name": "Box 52"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7895267600881769,
+          "y": 0.25333120597706416,
+          "z": 0.3700232064105944
+        },
+        "Kd": {
+          "x": 0.7895267600881769,
+          "y": 0.25333120597706416,
+          "z": 0.3700232064105944
+        },
+        "Ks": {
+          "x": 0.30222858218573384,
+          "y": 0.30222858218573384,
+          "z": 0.30222858218573384
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.48746166098556687,
+        "refractionIndex": 1.0388708405213511
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 7.0,
+            "z": 1.0
+          },
+          "name": "Box 53"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.15841202391386522,
+          "y": 0.36800971881608335,
+          "z": 0.9138226966436558
+        },
+        "Kd": {
+          "x": 0.15841202391386522,
+          "y": 0.36800971881608335,
+          "z": 0.9138226966436558
+        },
+        "Ks": {
+          "x": 0.01579236960337216,
+          "y": 0.01579236960337216,
+          "z": 0.01579236960337216
+        },
+        "reflectionIntensity": 0.03218306004970284,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.18895037543387594,
+        "refractionIndex": 1.7739093077608716
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 7.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 8.0,
+            "z": 1.0
+          },
+          "name": "Box 54"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7050225189000603,
+          "y": 0.14144963038064895,
+          "z": 0.9187761894781779
+        },
+        "Kd": {
+          "x": 0.7050225189000603,
+          "y": 0.14144963038064895,
+          "z": 0.9187761894781779
+        },
+        "Ks": {
+          "x": 0.44633206015817817,
+          "y": 0.44633206015817817,
+          "z": 0.44633206015817817
+        },
+        "reflectionIntensity": 0.17192577488478816,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.16576494053543356,
+        "refractionIndex": 1.3857500717099793
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "name": "Box 55"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.38240677934007894,
+          "y": 0.05270814979735139,
+          "z": 0.811350843137472
+        },
+        "Kd": {
+          "x": 0.38240677934007894,
+          "y": 0.05270814979735139,
+          "z": 0.811350843137472
+        },
+        "Ks": {
+          "x": 0.19757273008422666,
+          "y": 0.19757273008422666,
+          "z": 0.19757273008422666
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.2954722964845711,
+        "refractionIndex": 1.3382604519962218
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "name": "Box 56"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "reflectionIntensity": 0.95,
+        "shininess": 1,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "name": "Box 57"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.3156845411646728,
+          "y": 0.2777799228301916,
+          "z": 0.5469867342070093
+        },
+        "Kd": {
+          "x": 0.3156845411646728,
+          "y": 0.2777799228301916,
+          "z": 0.5469867342070093
+        },
+        "Ks": {
+          "x": 0.12269777235030727,
+          "y": 0.12269777235030727,
+          "z": 0.12269777235030727
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.06941157847744006,
+        "refractionIndex": 1.006152406203132
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 3.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "name": "Box 58"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.9806603777861826,
+          "y": 0.29812345462779655,
+          "z": 0.9412764641396038
+        },
+        "Kd": {
+          "x": 0.9806603777861826,
+          "y": 0.29812345462779655,
+          "z": 0.9412764641396038
+        },
+        "Ks": {
+          "x": 0.32149385080088033,
+          "y": 0.32149385080088033,
+          "z": 0.32149385080088033
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.29656012308392476,
+        "refractionIndex": 1.5518535103381037
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 4.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "name": "Box 59"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5472213397620586,
+          "y": 0.08420126641314452,
+          "z": 0.3705688150975497
+        },
+        "Kd": {
+          "x": 0.5472213397620586,
+          "y": 0.08420126641314452,
+          "z": 0.3705688150975497
+        },
+        "Ks": {
+          "x": 0.44266419158956327,
+          "y": 0.44266419158956327,
+          "z": 0.44266419158956327
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.29059558227362065,
+        "refractionIndex": 1.2676525133446734
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "name": "Box 60"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.575237496192001,
+          "y": 0.10365196682074662,
+          "z": 0.5046973152827225
+        },
+        "Kd": {
+          "x": 0.575237496192001,
+          "y": 0.10365196682074662,
+          "z": 0.5046973152827225
+        },
+        "Ks": {
+          "x": 0.45912200283551446,
+          "y": 0.45912200283551446,
+          "z": 0.45912200283551446
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 7.0,
+            "z": 1.0
+          },
+          "name": "Box 61"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.20427102245799755,
+          "y": 0.34764310348718275,
+          "z": 0.44123060549958804
+        },
+        "Kd": {
+          "x": 0.20427102245799755,
+          "y": 0.34764310348718275,
+          "z": 0.44123060549958804
+        },
+        "Ks": {
+          "x": 0.1419041317562324,
+          "y": 0.1419041317562324,
+          "z": 0.1419041317562324
+        },
+        "reflectionIntensity": 0.3158460411495049,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.47845245552511084,
+        "refractionIndex": 1.6842019410239253
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 7.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 8.0,
+            "z": 1.0
+          },
+          "name": "Box 62"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8172959648444896,
+          "y": 0.7633815336227981,
+          "z": 0.6285578441412473
+        },
+        "Kd": {
+          "x": 0.8172959648444896,
+          "y": 0.7633815336227981,
+          "z": 0.6285578441412473
+        },
+        "Ks": {
+          "x": 0.20815097879509642,
+          "y": 0.20815097879509642,
+          "z": 0.20815097879509642
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.16631643961073206,
+        "refractionIndex": 1.3878037593732762
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 7.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 8.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "name": "Box 63"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.10731583061068983,
+          "y": 0.22476073352778625,
+          "z": 0.6400178921777808
+        },
+        "Kd": {
+          "x": 0.10731583061068983,
+          "y": 0.22476073352778625,
+          "z": 0.6400178921777808
+        },
+        "Ks": {
+          "x": 0.08893161604068994,
+          "y": 0.08893161604068994,
+          "z": 0.08893161604068994
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.4772888823458114,
+        "refractionIndex": 1.7405879487701976
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 7.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 8.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "name": "Box 64"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.3823584999832761,
+          "y": 0.5522718345237057,
+          "z": 0.6844928162873082
+        },
+        "Kd": {
+          "x": 0.3823584999832761,
+          "y": 0.5522718345237057,
+          "z": 0.6844928162873082
+        },
+        "Ks": {
+          "x": 0.24959581719052615,
+          "y": 0.24959581719052615,
+          "z": 0.24959581719052615
+        },
+        "reflectionIntensity": 0.21357572404612613,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.0684994084067202,
+        "refractionIndex": 1.2519841595074819
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 7.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 8.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "name": "Box 65"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8514460571711839,
+          "y": 0.6799234250837166,
+          "z": 0.030083444518192892
+        },
+        "Kd": {
+          "x": 0.8514460571711839,
+          "y": 0.6799234250837166,
+          "z": 0.030083444518192892
+        },
+        "Ks": {
+          "x": 0.4168095014861411,
+          "y": 0.4168095014861411,
+          "z": 0.4168095014861411
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.2964924612646287,
+        "refractionIndex": 1.6742509366798795
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 7.0,
+            "y": 3.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 8.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "name": "Box 66"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.04427779479788607,
+          "y": 0.9977285836643364,
+          "z": 0.6697392057473582
+        },
+        "Kd": {
+          "x": 0.04427779479788607,
+          "y": 0.9977285836643364,
+          "z": 0.6697392057473582
+        },
+        "Ks": {
+          "x": 0.02366115781495709,
+          "y": 0.02366115781495709,
+          "z": 0.02366115781495709
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.3500383150049459,
+        "refractionIndex": 1.2932624203334673
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 7.0,
+            "y": 4.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 8.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "name": "Box 67"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6510194043048537,
+          "y": 0.9302043522049679,
+          "z": 0.7930549448106624
+        },
+        "Kd": {
+          "x": 0.6510194043048537,
+          "y": 0.9302043522049679,
+          "z": 0.7930549448106624
+        },
+        "Ks": {
+          "x": 0.49504778436861746,
+          "y": 0.49504778436861746,
+          "z": 0.49504778436861746
+        },
+        "reflectionIntensity": 0.4109255439871526,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 7.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 8.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "name": "Box 68"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.21808693182889527,
+          "y": 0.5647407950988377,
+          "z": 0.2771374320206835
+        },
+        "Kd": {
+          "x": 0.21808693182889527,
+          "y": 0.5647407950988377,
+          "z": 0.2771374320206835
+        },
+        "Ks": {
+          "x": 0.26019005060919487,
+          "y": 0.26019005060919487,
+          "z": 0.26019005060919487
+        },
+        "reflectionIntensity": 0.15568917606453003,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 7.0,
+            "y": 6.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 8.0,
+            "y": 7.0,
+            "z": 1.0
+          },
+          "name": "Box 69"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5127156426187701,
+          "y": 0.3441572176232205,
+          "z": 0.15981312563497774
+        },
+        "Kd": {
+          "x": 0.5127156426187701,
+          "y": 0.3441572176232205,
+          "z": 0.15981312563497774
+        },
+        "Ks": {
+          "x": 0.14287188517757,
+          "y": 0.14287188517757,
+          "z": 0.14287188517757
+        },
+        "reflectionIntensity": 0.19937957564786168,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 7.0,
+            "y": 7.0,
+            "z": 0.0
+          },
+          "maxPoint": {
+            "x": 8.0,
+            "y": 8.0,
+            "z": 1.0
+          },
+          "name": "Box 70"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6572050855150665,
+          "y": 0.30326973324937456,
+          "z": 0.8596510488934753
+        },
+        "Kd": {
+          "x": 0.6572050855150665,
+          "y": 0.30326973324937456,
+          "z": 0.8596510488934753
+        },
+        "Ks": {
+          "x": 0.34238803412360475,
+          "y": 0.34238803412360475,
+          "z": 0.34238803412360475
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.4927290729521273,
+        "refractionIndex": 1.3156293261709786
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "name": "Box 71"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.9714175508204802,
+          "y": 0.18433908703820434,
+          "z": 0.7108032337848174
+        },
+        "Kd": {
+          "x": 0.9714175508204802,
+          "y": 0.18433908703820434,
+          "z": 0.7108032337848174
+        },
+        "Ks": {
+          "x": 0.30479903330555513,
+          "y": 0.30479903330555513,
+          "z": 0.30479903330555513
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.29239008883161166,
+        "refractionIndex": 1.7356763589907827
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "name": "Box 72"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "reflectionIntensity": 0.8,
+        "shininess": 3,
+        "isTransparent": true,
+        "refractionIntensity": 0.2,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "name": "Box 73"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.3044220030261423,
+          "y": 0.2958624518655255,
+          "z": 0.3632083808904638
+        },
+        "Kd": {
+          "x": 0.3044220030261423,
+          "y": 0.2958624518655255,
+          "z": 0.3632083808904638
+        },
+        "Ks": {
+          "x": 0.397645844536415,
+          "y": 0.397645844536415,
+          "z": 0.397645844536415
+        },
+        "reflectionIntensity": 0.05849533508550403,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.41371207240253377,
+        "refractionIndex": 1.0373967625360683
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "name": "Box 74"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.10592722110313291,
+          "y": 0.16521963724694255,
+          "z": 0.4498510259496177
+        },
+        "Kd": {
+          "x": 0.10592722110313291,
+          "y": 0.16521963724694255,
+          "z": 0.4498510259496177
+        },
+        "Ks": {
+          "x": 0.13623663026118837,
+          "y": 0.13623663026118837,
+          "z": 0.13623663026118837
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.2888447819048161,
+        "refractionIndex": 1.0205262961353754
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 6.0,
+            "z": 2.0
+          },
+          "name": "Box 75"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7335265016566216,
+          "y": 0.9443407785245282,
+          "z": 0.2578333802610778
+        },
+        "Kd": {
+          "x": 0.7335265016566216,
+          "y": 0.9443407785245282,
+          "z": 0.2578333802610778
+        },
+        "Ks": {
+          "x": 0.033049338579149545,
+          "y": 0.033049338579149545,
+          "z": 0.033049338579149545
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.09057441544831313,
+        "refractionIndex": 1.564994551454306
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 1.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 2.0,
+            "y": 7.0,
+            "z": 2.0
+          },
+          "name": "Box 76"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.2835048167189417,
+          "y": 0.6713813251858882,
+          "z": 0.2564465338307995
+        },
+        "Kd": {
+          "x": 0.2835048167189417,
+          "y": 0.6713813251858882,
+          "z": 0.2564465338307995
+        },
+        "Ks": {
+          "x": 0.026953924646038685,
+          "y": 0.026953924646038685,
+          "z": 0.026953924646038685
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "name": "Box 77"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5152204858385089,
+          "y": 0.026130721660857725,
+          "z": 0.5765214261336129
+        },
+        "Kd": {
+          "x": 0.5152204858385089,
+          "y": 0.026130721660857725,
+          "z": 0.5765214261336129
+        },
+        "Ks": {
+          "x": 0.010122589780823754,
+          "y": 0.010122589780823754,
+          "z": 0.010122589780823754
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.17402869336260413,
+        "refractionIndex": 1.7343660226256974
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "name": "Box 78"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.27367724177742525,
+          "y": 0.2859880030929892,
+          "z": 0.015656247513244792
+        },
+        "Kd": {
+          "x": 0.27367724177742525,
+          "y": 0.2859880030929892,
+          "z": 0.015656247513244792
+        },
+        "Ks": {
+          "x": 0.03249360416821867,
+          "y": 0.03249360416821867,
+          "z": 0.03249360416821867
+        },
+        "reflectionIntensity": 0.39432945031192396,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.10158189902322051,
+        "refractionIndex": 1.492581317529007
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "name": "Box 79"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.3008538728014033,
+          "y": 0.40785505267485045,
+          "z": 0.2966608321927018
+        },
+        "Kd": {
+          "x": 0.3008538728014033,
+          "y": 0.40785505267485045,
+          "z": 0.2966608321927018
+        },
+        "Ks": {
+          "x": 0.49882748240907676,
+          "y": 0.49882748240907676,
+          "z": 0.49882748240907676
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.2904849406231033,
+        "refractionIndex": 1.787497138437004
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "name": "Box 80"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.40383370456662904,
+          "y": 0.39161089062306054,
+          "z": 0.4453646853363492
+        },
+        "Kd": {
+          "x": 0.40383370456662904,
+          "y": 0.39161089062306054,
+          "z": 0.4453646853363492
+        },
+        "Ks": {
+          "x": 0.12648840902546488,
+          "y": 0.12648840902546488,
+          "z": 0.12648840902546488
+        },
+        "reflectionIntensity": 0.20778078422470403,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.4068567457493949,
+        "refractionIndex": 1.5606204295539925
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 6.0,
+            "z": 2.0
+          },
+          "name": "Box 81"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.36525568134616715,
+          "y": 0.9404458624834031,
+          "z": 0.3781428270511584
+        },
+        "Kd": {
+          "x": 0.36525568134616715,
+          "y": 0.9404458624834031,
+          "z": 0.3781428270511584
+        },
+        "Ks": {
+          "x": 0.18758612899375776,
+          "y": 0.18758612899375776,
+          "z": 0.18758612899375776
+        },
+        "reflectionIntensity": 0.16139277504352983,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 7.0,
+            "z": 2.0
+          },
+          "name": "Box 82"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "reflectionIntensity": 0.95,
+        "shininess": 5,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "name": "Box 83"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5252157447255633,
+          "y": 0.8715936138972976,
+          "z": 0.5786008986228365
+        },
+        "Kd": {
+          "x": 0.5252157447255633,
+          "y": 0.8715936138972976,
+          "z": 0.5786008986228365
+        },
+        "Ks": {
+          "x": 0.19473273470800762,
+          "y": 0.19473273470800762,
+          "z": 0.19473273470800762
+        },
+        "reflectionIntensity": 0.351111042024265,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "name": "Box 84"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.2110571807768985,
+          "y": 0.08876835206930378,
+          "z": 0.5373006393609825
+        },
+        "Kd": {
+          "x": 0.2110571807768985,
+          "y": 0.08876835206930378,
+          "z": 0.5373006393609825
+        },
+        "Ks": {
+          "x": 0.08721620910872813,
+          "y": 0.08721620910872813,
+          "z": 0.08721620910872813
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.3269822333804366,
+        "refractionIndex": 1.5399172561806214
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "name": "Box 85"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6163589297353843,
+          "y": 0.6002940560170535,
+          "z": 0.6526862285686379
+        },
+        "Kd": {
+          "x": 0.6163589297353843,
+          "y": 0.6002940560170535,
+          "z": 0.6526862285686379
+        },
+        "Ks": {
+          "x": 0.4711310670721854,
+          "y": 0.4711310670721854,
+          "z": 0.4711310670721854
+        },
+        "reflectionIntensity": 0.16237751895035796,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.07146847849632959,
+        "refractionIndex": 1.778197348198168
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "name": "Box 86"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.4514877624421261,
+          "y": 0.03414103525468337,
+          "z": 0.5638217277896637
+        },
+        "Kd": {
+          "x": 0.4514877624421261,
+          "y": 0.03414103525468337,
+          "z": 0.5638217277896637
+        },
+        "Ks": {
+          "x": 0.43747408728901077,
+          "y": 0.43747408728901077,
+          "z": 0.43747408728901077
+        },
+        "reflectionIntensity": 0.21560927136100178,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 6.0,
+            "z": 2.0
+          },
+          "name": "Box 87"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8057022053433572,
+          "y": 0.1953487168439435,
+          "z": 0.7390407054354995
+        },
+        "Kd": {
+          "x": 0.8057022053433572,
+          "y": 0.1953487168439435,
+          "z": 0.7390407054354995
+        },
+        "Ks": {
+          "x": 0.4947791365138999,
+          "y": 0.4947791365138999,
+          "z": 0.4947791365138999
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.024759985775268,
+        "refractionIndex": 1.7538326398712867
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 7.0,
+            "z": 2.0
+          },
+          "name": "Box 88"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.46315900890312556,
+          "y": 0.07738206391217561,
+          "z": 0.7535918825619892
+        },
+        "Kd": {
+          "x": 0.46315900890312556,
+          "y": 0.07738206391217561,
+          "z": 0.7535918825619892
+        },
+        "Ks": {
+          "x": 0.232505557357993,
+          "y": 0.232505557357993,
+          "z": 0.232505557357993
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "name": "Box 89"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8400538769760452,
+          "y": 0.7287920016730793,
+          "z": 0.7756842723356457
+        },
+        "Kd": {
+          "x": 0.8400538769760452,
+          "y": 0.7287920016730793,
+          "z": 0.7756842723356457
+        },
+        "Ks": {
+          "x": 0.39230123676705503,
+          "y": 0.39230123676705503,
+          "z": 0.39230123676705503
+        },
+        "reflectionIntensity": 0.1874130588594876,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.2503350373237047,
+        "refractionIndex": 1.5273658121899976
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "name": "Box 90"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.09870343487586153,
+          "y": 0.05102471124517349,
+          "z": 0.2903774548310589
+        },
+        "Kd": {
+          "x": 0.09870343487586153,
+          "y": 0.05102471124517349,
+          "z": 0.2903774548310589
+        },
+        "Ks": {
+          "x": 0.1824825428025446,
+          "y": 0.1824825428025446,
+          "z": 0.1824825428025446
+        },
+        "reflectionIntensity": 0.2676305492861113,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.20452159998198977,
+        "refractionIndex": 1.7399053521609247
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "name": "Box 91"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7450668967388174,
+          "y": 0.7982835040794957,
+          "z": 0.6761602147015836
+        },
+        "Kd": {
+          "x": 0.7450668967388174,
+          "y": 0.7982835040794957,
+          "z": 0.6761602147015836
+        },
+        "Ks": {
+          "x": 0.02954344865274039,
+          "y": 0.02954344865274039,
+          "z": 0.02954344865274039
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.20884982512735112,
+        "refractionIndex": 1.0594481743310258
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "name": "Box 92"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5569190753520286,
+          "y": 0.9520248985370825,
+          "z": 0.47567676020043814
+        },
+        "Kd": {
+          "x": 0.5569190753520286,
+          "y": 0.9520248985370825,
+          "z": 0.47567676020043814
+        },
+        "Ks": {
+          "x": 0.3262542751180412,
+          "y": 0.3262542751180412,
+          "z": 0.3262542751180412
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.12511478866253856,
+        "refractionIndex": 1.0889145229802846
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 6.0,
+            "z": 2.0
+          },
+          "name": "Box 93"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.559788108164511,
+          "y": 0.827618716100415,
+          "z": 0.24551813481747442
+        },
+        "Kd": {
+          "x": 0.559788108164511,
+          "y": 0.827618716100415,
+          "z": 0.24551813481747442
+        },
+        "Ks": {
+          "x": 0.24824932206371292,
+          "y": 0.24824932206371292,
+          "z": 0.24824932206371292
+        },
+        "reflectionIntensity": 0.43689624234909163,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 7.0,
+            "z": 2.0
+          },
+          "name": "Box 94"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.27461270899937484,
+          "y": 0.33831418974092853,
+          "z": 0.8764277652960858
+        },
+        "Kd": {
+          "x": 0.27461270899937484,
+          "y": 0.33831418974092853,
+          "z": 0.8764277652960858
+        },
+        "Ks": {
+          "x": 0.2043667487758445,
+          "y": 0.2043667487758445,
+          "z": 0.2043667487758445
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "name": "Box 95"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.24056249158974397,
+          "y": 0.7219085054923546,
+          "z": 0.9536967009261479
+        },
+        "Kd": {
+          "x": 0.24056249158974397,
+          "y": 0.7219085054923546,
+          "z": 0.9536967009261479
+        },
+        "Ks": {
+          "x": 0.484332890432844,
+          "y": 0.484332890432844,
+          "z": 0.484332890432844
+        },
+        "reflectionIntensity": 0.19802286516739892,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "name": "Box 96"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8682603936740327,
+          "y": 0.8942847915511921,
+          "z": 0.8495549826353216
+        },
+        "Kd": {
+          "x": 0.8682603936740327,
+          "y": 0.8942847915511921,
+          "z": 0.8495549826353216
+        },
+        "Ks": {
+          "x": 0.36831254658121876,
+          "y": 0.36831254658121876,
+          "z": 0.36831254658121876
+        },
+        "reflectionIntensity": 0.11203502393910714,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "name": "Box 97"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6352279225637273,
+          "y": 0.10819237469063547,
+          "z": 0.14007782415795345
+        },
+        "Kd": {
+          "x": 0.6352279225637273,
+          "y": 0.10819237469063547,
+          "z": 0.14007782415795345
+        },
+        "Ks": {
+          "x": 0.14752005681622632,
+          "y": 0.14752005681622632,
+          "z": 0.14752005681622632
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.17858674835592492,
+        "refractionIndex": 1.3362790608315946
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "name": "Box 98"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.23015534917353941,
+          "y": 0.41590114636571873,
+          "z": 0.23717175710257354
+        },
+        "Kd": {
+          "x": 0.23015534917353941,
+          "y": 0.41590114636571873,
+          "z": 0.23717175710257354
+        },
+        "Ks": {
+          "x": 0.13217021153000968,
+          "y": 0.13217021153000968,
+          "z": 0.13217021153000968
+        },
+        "reflectionIntensity": 0.31452744905547464,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 6.0,
+            "z": 2.0
+          },
+          "name": "Box 99"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.10951580691503804,
+          "y": 0.04370086645509441,
+          "z": 0.23641273898233595
+        },
+        "Kd": {
+          "x": 0.10951580691503804,
+          "y": 0.04370086645509441,
+          "z": 0.23641273898233595
+        },
+        "Ks": {
+          "x": 0.4557657878762031,
+          "y": 0.4557657878762031,
+          "z": 0.4557657878762031
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.30980982040767713,
+        "refractionIndex": 1.2391256030954634
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 7.0,
+            "z": 2.0
+          },
+          "name": "Box 100"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.9322924024232533,
+          "y": 0.1728529968988778,
+          "z": 0.9978502119541598
+        },
+        "Kd": {
+          "x": 0.9322924024232533,
+          "y": 0.1728529968988778,
+          "z": 0.9978502119541598
+        },
+        "Ks": {
+          "x": 0.15964437696749,
+          "y": 0.15964437696749,
+          "z": 0.15964437696749
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.3652811282699612,
+        "refractionIndex": 1.659575680007883
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 1.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "name": "Box 101"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.28778304710431457,
+          "y": 0.6297900454598057,
+          "z": 0.09948373405056876
+        },
+        "Kd": {
+          "x": 0.28778304710431457,
+          "y": 0.6297900454598057,
+          "z": 0.09948373405056876
+        },
+        "Ks": {
+          "x": 0.14340844043381124,
+          "y": 0.14340844043381124,
+          "z": 0.14340844043381124
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.06269402153038595,
+        "refractionIndex": 1.0809658728311833
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 2.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "name": "Box 102"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.12056555421253756,
+          "y": 0.5801927377545476,
+          "z": 0.41178231996916803
+        },
+        "Kd": {
+          "x": 0.12056555421253756,
+          "y": 0.5801927377545476,
+          "z": 0.41178231996916803
+        },
+        "Ks": {
+          "x": 0.13570631896833285,
+          "y": 0.13570631896833285,
+          "z": 0.13570631896833285
+        },
+        "reflectionIntensity": 0.2971082001600536,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 3.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "name": "Box 103"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7282378772421757,
+          "y": 0.04906398239261811,
+          "z": 0.6426249000437726
+        },
+        "Kd": {
+          "x": 0.7282378772421757,
+          "y": 0.04906398239261811,
+          "z": 0.6426249000437726
+        },
+        "Ks": {
+          "x": 0.4991423483600447,
+          "y": 0.4991423483600447,
+          "z": 0.4991423483600447
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.34087386069098297,
+        "refractionIndex": 1.110505409550679
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 4.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "name": "Box 104"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.738031570414437,
+          "y": 0.6708762977320161,
+          "z": 0.7127765273503897
+        },
+        "Kd": {
+          "x": 0.738031570414437,
+          "y": 0.6708762977320161,
+          "z": 0.7127765273503897
+        },
+        "Ks": {
+          "x": 0.25279407671920945,
+          "y": 0.25279407671920945,
+          "z": 0.25279407671920945
+        },
+        "reflectionIntensity": 0.24641671999589387,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.43709950410946397,
+        "refractionIndex": 1.1760738597205562
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 5.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 6.0,
+            "z": 2.0
+          },
+          "name": "Box 105"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.10105563184325883,
+          "y": 0.6184972191517829,
+          "z": 0.3595624134620995
+        },
+        "Kd": {
+          "x": 0.10105563184325883,
+          "y": 0.6184972191517829,
+          "z": 0.3595624134620995
+        },
+        "Ks": {
+          "x": 0.033726920986175024,
+          "y": 0.033726920986175024,
+          "z": 0.033726920986175024
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 6.0,
+            "y": 6.0,
+            "z": 1.0
+          },
+          "maxPoint": {
+            "x": 7.0,
+            "y": 7.0,
+            "z": 2.0
+          },
+          "name": "Box 106"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.07295483961746851,
+          "y": 0.20351907630613075,
+          "z": 0.9354071292983994
+        },
+        "Kd": {
+          "x": 0.07295483961746851,
+          "y": 0.20351907630613075,
+          "z": 0.9354071292983994
+        },
+        "Ks": {
+          "x": 0.10070420637561678,
+          "y": 0.10070420637561678,
+          "z": 0.10070420637561678
+        },
+        "reflectionIntensity": 0.0579417742766149,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.3140798968189336,
+        "refractionIndex": 1.310489188973897
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 3.0,
+            "z": 3.0
+          },
+          "name": "Box 107"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "reflectionIntensity": 0.8,
+        "shininess": 6,
+        "isTransparent": true,
+        "refractionIntensity": 0.2,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 4.0,
+            "z": 3.0
+          },
+          "name": "Box 108"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.9874385088403967,
+          "y": 0.17596640147058762,
+          "z": 0.6808805137605813
+        },
+        "Kd": {
+          "x": 0.9874385088403967,
+          "y": 0.17596640147058762,
+          "z": 0.6808805137605813
+        },
+        "Ks": {
+          "x": 0.12897806218359126,
+          "y": 0.12897806218359126,
+          "z": 0.12897806218359126
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 5.0,
+            "z": 3.0
+          },
+          "name": "Box 109"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.19278182591831572,
+          "y": 0.2238941714883732,
+          "z": 0.9503192092043244
+        },
+        "Kd": {
+          "x": 0.19278182591831572,
+          "y": 0.2238941714883732,
+          "z": 0.9503192092043244
+        },
+        "Ks": {
+          "x": 0.29371999106675334,
+          "y": 0.29371999106675334,
+          "z": 0.29371999106675334
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.4416410573422286,
+        "refractionIndex": 1.5521570438245655
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 2.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 3.0,
+            "y": 6.0,
+            "z": 3.0
+          },
+          "name": "Box 110"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.5320537979386227,
+          "y": 0.8748919080498254,
+          "z": 0.1584240234756118
+        },
+        "Kd": {
+          "x": 0.5320537979386227,
+          "y": 0.8748919080498254,
+          "z": 0.1584240234756118
+        },
+        "Ks": {
+          "x": 0.4106703375801889,
+          "y": 0.4106703375801889,
+          "z": 0.4106703375801889
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.023325581822376873,
+        "refractionIndex": 1.4399548123218797
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 3.0,
+            "z": 3.0
+          },
+          "name": "Box 111"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.40852173351812415,
+          "y": 0.704077156018652,
+          "z": 0.5632024227352546
+        },
+        "Kd": {
+          "x": 0.40852173351812415,
+          "y": 0.704077156018652,
+          "z": 0.5632024227352546
+        },
+        "Ks": {
+          "x": 0.2180023246319991,
+          "y": 0.2180023246319991,
+          "z": 0.2180023246319991
+        },
+        "reflectionIntensity": 0.4882320716882317,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 3.0
+          },
+          "name": "Box 112"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.10998916078641097,
+          "y": 0.2887041416772811,
+          "z": 0.7300690757464412
+        },
+        "Kd": {
+          "x": 0.10998916078641097,
+          "y": 0.2887041416772811,
+          "z": 0.7300690757464412
+        },
+        "Ks": {
+          "x": 0.10907827039615658,
+          "y": 0.10907827039615658,
+          "z": 0.10907827039615658
+        },
+        "reflectionIntensity": 0.47824583005710863,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.4433858671520221,
+        "refractionIndex": 1.5407989334751087
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 5.0,
+            "z": 3.0
+          },
+          "name": "Box 113"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.04298201768803034,
+          "y": 0.7838039006776475,
+          "z": 0.204467715700126
+        },
+        "Kd": {
+          "x": 0.04298201768803034,
+          "y": 0.7838039006776475,
+          "z": 0.204467715700126
+        },
+        "Ks": {
+          "x": 0.10832483122053499,
+          "y": 0.10832483122053499,
+          "z": 0.10832483122053499
+        },
+        "reflectionIntensity": 0.4475437119374779,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 6.0,
+            "z": 3.0
+          },
+          "name": "Box 114"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.9359587430838782,
+          "y": 0.6490097925056939,
+          "z": 0.6349352761258438
+        },
+        "Kd": {
+          "x": 0.9359587430838782,
+          "y": 0.6490097925056939,
+          "z": 0.6349352761258438
+        },
+        "Ks": {
+          "x": 0.03731831508882788,
+          "y": 0.03731831508882788,
+          "z": 0.03731831508882788
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 3.0,
+            "z": 3.0
+          },
+          "name": "Box 115"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1603258460361131,
+          "y": 0.5463011675451025,
+          "z": 0.7184467045588323
+        },
+        "Kd": {
+          "x": 0.1603258460361131,
+          "y": 0.5463011675451025,
+          "z": 0.7184467045588323
+        },
+        "Ks": {
+          "x": 0.40356956702873936,
+          "y": 0.40356956702873936,
+          "z": 0.40356956702873936
+        },
+        "reflectionIntensity": 0.08777633269007695,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 4.0,
+            "z": 3.0
+          },
+          "name": "Box 116"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6411702473459797,
+          "y": 0.7592876068219613,
+          "z": 0.5185551398886753
+        },
+        "Kd": {
+          "x": 0.6411702473459797,
+          "y": 0.7592876068219613,
+          "z": 0.5185551398886753
+        },
+        "Ks": {
+          "x": 0.34005564641040253,
+          "y": 0.34005564641040253,
+          "z": 0.34005564641040253
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.02134574542873885,
+        "refractionIndex": 1.7652278402413475
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 5.0,
+            "z": 3.0
+          },
+          "name": "Box 117"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.235065171674109,
+          "y": 0.3501872154634392,
+          "z": 0.5938337533793017
+        },
+        "Kd": {
+          "x": 0.235065171674109,
+          "y": 0.3501872154634392,
+          "z": 0.5938337533793017
+        },
+        "Ks": {
+          "x": 0.16950493343908946,
+          "y": 0.16950493343908946,
+          "z": 0.16950493343908946
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 6.0,
+            "z": 3.0
+          },
+          "name": "Box 118"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.13706337435120763,
+          "y": 0.7093540536799842,
+          "z": 0.9371933018312534
+        },
+        "Kd": {
+          "x": 0.13706337435120763,
+          "y": 0.7093540536799842,
+          "z": 0.9371933018312534
+        },
+        "Ks": {
+          "x": 0.1065197905314878,
+          "y": 0.1065197905314878,
+          "z": 0.1065197905314878
+        },
+        "reflectionIntensity": 0.044729578612889453,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 2.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 3.0,
+            "z": 3.0
+          },
+          "name": "Box 119"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.12861002568950608,
+          "y": 0.7184233089646538,
+          "z": 0.10645395626682164
+        },
+        "Kd": {
+          "x": 0.12861002568950608,
+          "y": 0.7184233089646538,
+          "z": 0.10645395626682164
+        },
+        "Ks": {
+          "x": 0.090416856360092,
+          "y": 0.090416856360092,
+          "z": 0.090416856360092
+        },
+        "reflectionIntensity": 0.4915604665595159,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.37244245677937315,
+        "refractionIndex": 1.0773090516765913
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 3.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 4.0,
+            "z": 3.0
+          },
+          "name": "Box 120"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.08007814833782445,
+          "y": 0.7989124988168487,
+          "z": 0.1580536668098259
+        },
+        "Kd": {
+          "x": 0.08007814833782445,
+          "y": 0.7989124988168487,
+          "z": 0.1580536668098259
+        },
+        "Ks": {
+          "x": 0.3854844550104309,
+          "y": 0.3854844550104309,
+          "z": 0.3854844550104309
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 4.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 5.0,
+            "z": 3.0
+          },
+          "name": "Box 121"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.520078637028229,
+          "y": 0.2622916554965242,
+          "z": 0.733797469664746
+        },
+        "Kd": {
+          "x": 0.520078637028229,
+          "y": 0.2622916554965242,
+          "z": 0.733797469664746
+        },
+        "Ks": {
+          "x": 0.3204831527358254,
+          "y": 0.3204831527358254,
+          "z": 0.3204831527358254
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 5.0,
+            "y": 5.0,
+            "z": 2.0
+          },
+          "maxPoint": {
+            "x": 6.0,
+            "y": 6.0,
+            "z": 3.0
+          },
+          "name": "Box 122"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.7450707798753672,
+          "y": 0.7502893116420862,
+          "z": 0.21059770676765788
+        },
+        "Kd": {
+          "x": 0.7450707798753672,
+          "y": 0.7502893116420862,
+          "z": 0.21059770676765788
+        },
+        "Ks": {
+          "x": 0.24422636644363804,
+          "y": 0.24422636644363804,
+          "z": 0.24422636644363804
+        },
+        "reflectionIntensity": 0.08055530512393483,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 3.0,
+            "z": 3.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 4.0
+          },
+          "name": "Box 123"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.8850031530474849,
+          "y": 0.13660213177982483,
+          "z": 0.9552274650835058
+        },
+        "Kd": {
+          "x": 0.8850031530474849,
+          "y": 0.13660213177982483,
+          "z": 0.9552274650835058
+        },
+        "Ks": {
+          "x": 0.18007741176542902,
+          "y": 0.18007741176542902,
+          "z": 0.18007741176542902
+        },
+        "reflectionIntensity": 0.07876400103950376,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.30451844997452804,
+        "refractionIndex": 1.6075529265371955
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 3.0,
+            "y": 4.0,
+            "z": 3.0
+          },
+          "maxPoint": {
+            "x": 4.0,
+            "y": 5.0,
+            "z": 4.0
+          },
+          "name": "Box 124"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.39726634597645405,
+          "y": 0.47910135533434606,
+          "z": 0.34727234519061567
+        },
+        "Kd": {
+          "x": 0.39726634597645405,
+          "y": 0.47910135533434606,
+          "z": 0.34727234519061567
+        },
+        "Ks": {
+          "x": 0.36949462900151236,
+          "y": 0.36949462900151236,
+          "z": 0.36949462900151236
+        },
+        "reflectionIntensity": 0.23135541332727866,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 3.0,
+            "z": 3.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 4.0,
+            "z": 4.0
+          },
+          "name": "Box 125"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.6366169507433945,
+          "y": 0.6232923031285655,
+          "z": 0.6510515119700229
+        },
+        "Kd": {
+          "x": 0.6366169507433945,
+          "y": 0.6232923031285655,
+          "z": 0.6510515119700229
+        },
+        "Ks": {
+          "x": 0.4886929510094658,
+          "y": 0.4886929510094658,
+          "z": 0.4886929510094658
+        },
+        "reflectionIntensity": 0.0,
+        "shininess": 10,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.AxisAlignedRectangle",
+        "DATA": {
+          "minPoint": {
+            "x": 4.0,
+            "y": 4.0,
+            "z": 3.0
+          },
+          "maxPoint": {
+            "x": 5.0,
+            "y": 5.0,
+            "z": 4.0
+          },
+          "name": "Box 126"
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.038927625496213425,
+          "y": 0.9843594365404273,
+          "z": 0.5121538180030039
+        },
+        "Kd": {
+          "x": 0.038927625496213425,
+          "y": 0.9843594365404273,
+          "z": 0.5121538180030039
+        },
+        "Ks": {
+          "x": 0.4007387455056504,
+          "y": 0.4007387455056504,
+          "z": 0.4007387455056504
+        },
+        "reflectionIntensity": 0.40312692049620463,
+        "shininess": 10,
+        "isTransparent": true,
+        "refractionIntensity": 0.4531203815853155,
+        "refractionIndex": 1.3087105089996829
+      }
+    },
+    {
+      "shape": {
+        "CLASSNAME": "edu.cg.scene.objects.Plain",
+        "DATA": {
+          "a": 0.0,
+          "b": 0.0,
+          "c": 1.0,
+          "d": -0.0
+        }
+      },
+      "material": {
+        "Ka": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Kd": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "Ks": {
+          "x": 0.1,
+          "y": 0.1,
+          "z": 0.1
+        },
+        "reflectionIntensity": 0.4,
+        "shininess": 11,
+        "isTransparent": false,
+        "refractionIntensity": 0.3,
+        "refractionIndex": 1.5
+      }
+    }
+  ]
+}
