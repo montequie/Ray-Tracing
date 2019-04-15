@@ -126,7 +126,6 @@ public class Scene {
 
     public BufferedImage render(int imgWidth, int imgHeight, double viewPlainWidth, Logger logger)
             throws InterruptedException, ExecutionException {
-        // TODO: Please notice the following comment.
         // This method is invoked each time Render Scene button is invoked.
         // Use it to initialize additional fields you need.
         initSomeFields(imgWidth, imgHeight, logger);
@@ -179,8 +178,6 @@ public class Scene {
     }
 
     private Vec calcColor(Ray ray, int recusionLevel) {
-        // TODO: Implement this method.
-        //       This is the recursive method in RayTracing.
         if (recusionLevel >= maxRecursionLevel) {
             return new Vec();
         }
@@ -201,31 +198,32 @@ public class Scene {
                 color.add(calcSpecularColor(closetHit, rayToLight, ray).mult(l.intensity(hittingPoint, rayToLight)));
             }
         }
+
+        Vec N = closetHit.getNormalToSurface();
+        Vec L = ray.direction();
+
         if (renderReflections) {
-            // TODO:
-            Vec N = closetHit.getNormalToSurface();
-            Vec L = ray.direction();
             // get the reflection vector direction
-            Vec reflectedDirection = Ops.reflect(L, N);
-            Ray reflectedRay = new Ray(hittingPoint, reflectedDirection;
+            Vec reflectDirection = Ops.reflect(L, N);
+            Ray reflectRay = new Ray(hittingPoint, reflectDirection);
             // the reflection coefficient for the material
             double K_R = hittingSurface.reflectionIntensity();
             // recursive call calcColor for the reflected ray
-            Vec reflectedColor = calcColor(reflectedRay, recusionLevel + 1).mult(new Vec(K_R));
+            Vec reflectedColor = calcColor(reflectRay, recusionLevel + 1).mult(new Vec(K_R));
             color = color.add(reflectedColor);
         }
-        if (renderRefarctions) {
-            // TODO:
-            Vec refractionColor = new Vec();
-            if (surface.isTransparent()) {
-                double n1 = surface.n1(minHit);
-                double n2 = surface.n2(minHit);
-                Vec refractionDirection = Ops.refract(ray.direction(), minHit.getNormalToSurface(), n1, n2);
-                Vec refractionWeight = new Vec(surface.refractionIntensity());
-                refractionColor = this.calcColor(new Ray(hittingPoint, refractionDirection), recusionLevel + 1).mult(refractionWeight);
-                color = color.add(refractionColor);
-            }
+
+        if (renderRefarctions && hittingSurface.isTransparent()) {
+            double n1 = hittingSurface.n1(closetHit);
+            double n2 = hittingSurface.n2(closetHit);
+            Vec refractionDirection = Ops.refract(L, N, n1, n2);
+            Ray refractRay = new Ray(hittingPoint, refractionDirection);
+            // the transparency coefficient
+            double K_T = hittingSurface.refractionIntensity();
+            Vec refractionColor = calcColor(refractRay, recusionLevel + 1).mult(new Vec(K_T));
+            color = color.add(refractionColor);
         }
+
         return color;
     }
 
