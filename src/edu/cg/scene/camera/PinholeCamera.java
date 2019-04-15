@@ -2,10 +2,19 @@ package edu.cg.scene.camera;
 
 import edu.cg.UnimplementedMethodException;
 import edu.cg.algebra.Point;
+import edu.cg.algebra.Ray;
 import edu.cg.algebra.Vec;
 
 public class PinholeCamera {
-	//TODO Add your fields
+	private Point cameraPosition;
+	private Point center;
+	private Vec towardsVec;
+	private Vec rightVec;
+    private Vec upVec;
+    private double distanceToPlane;
+    private int height;
+    private int width;
+    private double viewPlainWidth;
 	
 	/**
 	 * Initializes a pinhole camera model with default resolution 200X200 (RxXRy) and image width 2.
@@ -16,7 +25,12 @@ public class PinholeCamera {
 	 * 
 	 */
 	public PinholeCamera(Point cameraPosition, Vec towardsVec, Vec upVec, double distanceToPlain) {
-		// TODO: Initialize your fields
+		this.cameraPosition = cameraPosition;
+		this.towardsVec = towardsVec.normalize();
+		this.rightVec = towardsVec.cross(upVec).normalize();
+		this.upVec = rightVec.cross(towardsVec).normalize();
+		this.distanceToPlane = distanceToPlain;
+		this.center = new Ray(cameraPosition, towardsVec).add(distanceToPlain);
 	}
 	/**
 	 * Initializes the resolution and width of the image.
@@ -25,7 +39,9 @@ public class PinholeCamera {
 	 * @param viewPlainWidth - the width of the image plain in world coordinates.
 	 */
 	public void initResolution(int height, int width, double viewPlainWidth) {
-		//TODO: init your fields
+		this.height = height;
+		this.width = width;
+		this.viewPlainWidth = viewPlainWidth;
 	}
 
 	/**
@@ -43,6 +59,6 @@ public class PinholeCamera {
 	 * @return a "new" point representing the camera position.
 	 */
 	public Point getCameraPosition() {
-		throw new UnimplementedMethodException("getCameraPosition");
+		return new Point(cameraPosition.x, cameraPosition.y, cameraPosition.z);
 	}
 }
