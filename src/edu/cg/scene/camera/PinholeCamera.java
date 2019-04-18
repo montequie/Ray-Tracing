@@ -51,7 +51,14 @@ public class PinholeCamera {
 	 * @return the middle point of the pixel (x,y) in the model coordinates.
 	 */
 	public Point transform(int x, int y) {
-		throw new UnimplementedMethodException("transform");
+
+	    double ratio = viewPlainWidth/width;
+	    double rightCalc = (double) (x - width/2) * ratio;
+	    double upCalc = (double) (y - height/2) * -ratio;
+        Vec up = upVec.mult(upCalc);
+        Vec right = rightVec.mult(rightCalc);
+
+        return center.add(up).add(right);
 	}
 	
 	/**
