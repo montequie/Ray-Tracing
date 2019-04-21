@@ -195,12 +195,13 @@ public class Scene {
         Surface hittingSurface = closetHit.getSurface();
 
         Vec color = new Vec();
+        color = color.add(calcAmbientColor(hittingSurface));
         color.add(calcAmbientColor(hittingSurface));
         for (Light l : lightSources) {
             Ray rayToLight = l.rayToLight(hittingPoint);
             if (!isOccluded(l, rayToLight)) {
-                color.add(calcDiffuseColor(closetHit, rayToLight).mult(l.intensity(hittingPoint, rayToLight)));
-                color.add(calcSpecularColor(closetHit, rayToLight, ray).mult(l.intensity(hittingPoint, rayToLight)));
+                color = color.add(calcDiffuseColor(closetHit, rayToLight).mult(l.intensity(hittingPoint, rayToLight)));
+                color = color.add(calcSpecularColor(closetHit, rayToLight, ray).mult(l.intensity(hittingPoint, rayToLight)));
             }
         }
 
