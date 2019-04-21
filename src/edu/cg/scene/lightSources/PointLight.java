@@ -49,10 +49,10 @@ public class PointLight extends Light {
     }
 
     @Override
-    public Vec intensity(Point hittingPoint, Ray rayToLight) {
+    public Vec intensity(Point hittingPoint, Ray rayToLight)     {
 		double d = hittingPoint.dist(position);
-		double denominator = (1.0 / kc + kl * d + kq * Math.pow(d, 2));
-		return intensity.mult(denominator);
+		double denominator = kc + kl * d + kq * Math.pow(d, 2);
+		return intensity.mult(1.0 / denominator);
     }
 
     public PointLight initPosition(Point position) {
