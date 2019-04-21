@@ -6,38 +6,38 @@ import edu.cg.algebra.Vec;
 import edu.cg.scene.objects.Surface;
 
 public class DirectionalLight extends Light {
-	private Vec direction = new Vec(0, -1, -1);
+    private Vec direction = new Vec(0, -1, -1);
 
-	public DirectionalLight initDirection(Vec direction) {
-		this.direction = direction;
-		return this;
-	}
+    public DirectionalLight initDirection(Vec direction) {
+        this.direction = direction;
+        return this;
+    }
 
-	@Override
-	public String toString() {
-		String endl = System.lineSeparator();
-		return "Directional Light:" + endl + super.toString() +
-				"Direction: " + direction + endl;
-	}
+    @Override
+    public String toString() {
+        String endl = System.lineSeparator();
+        return "Directional Light:" + endl + super.toString() +
+                "Direction: " + direction + endl;
+    }
 
-	@Override
-	public DirectionalLight initIntensity(Vec intensity) {
-		return (DirectionalLight)super.initIntensity(intensity);
-	}
+    @Override
+    public DirectionalLight initIntensity(Vec intensity) {
+        return (DirectionalLight) super.initIntensity(intensity);
+    }
 
     @Override
     public Ray rayToLight(Point fromPoint) {
-        return null;
+        return new Ray(fromPoint, direction.neg());
     }
 
     @Override
     public boolean isOccludedBy(Surface surface, Ray rayToLight) {
-        return false;
+        return surface.intersect(rayToLight) != null;
     }
 
     @Override
     public Vec intensity(Point hittingPoint, Ray rayToLight) {
-        return null;
+        return intensity;
     }
 
     //TODO: add some methods

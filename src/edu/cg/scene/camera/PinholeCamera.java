@@ -11,7 +11,7 @@ public class PinholeCamera {
 	private Vec towardsVec;
 	private Vec rightVec;
     private Vec upVec;
-    private double distanceToPlane;
+    private double distanceToPlain;
     private int height;
     private int width;
     private double viewPlainWidth;
@@ -22,14 +22,14 @@ public class PinholeCamera {
 	 * @param towardsVec - The towards vector of the camera (not necessarily normalized).
 	 * @param upVec - The up vector of the camera.
 	 * @param distanceToPlain - The distance of the camera (position) to the center point of the image-plain.
-	 * 
+	 *
 	 */
 	public PinholeCamera(Point cameraPosition, Vec towardsVec, Vec upVec, double distanceToPlain) {
 		this.cameraPosition = cameraPosition;
 		this.towardsVec = towardsVec.normalize();
 		this.rightVec = towardsVec.cross(upVec).normalize();
 		this.upVec = rightVec.cross(towardsVec).normalize();
-		this.distanceToPlane = distanceToPlain;
+		this.distanceToPlain = distanceToPlain;
 		this.center = new Ray(cameraPosition, towardsVec).add(distanceToPlain);
 	}
 	/**
@@ -57,7 +57,7 @@ public class PinholeCamera {
 	    double upCalc = (double) (y - height/2) * -ratio;
         Vec up = upVec.mult(upCalc);
         Vec right = rightVec.mult(rightCalc);
-
+        this.center = new Ray(cameraPosition, towardsVec).add(distanceToPlain);
         return center.add(up).add(right);
 	}
 	

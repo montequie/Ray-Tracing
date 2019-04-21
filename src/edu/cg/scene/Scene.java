@@ -144,8 +144,13 @@ public class Scene {
                 " rays over " + name);
 
         for (int y = 0; y < imgHeight; ++y)
-            for (int x = 0; x < imgWidth; ++x)
+            for (int x = 0; x < imgWidth; ++x) {
+                // TODO: remove
+                Ray ray = new Ray(camera.getCameraPosition(), camera.transform(x, y));
+                Vec color = calcColor(ray, 0);
                 futures[y][x] = calcColor(x, y);
+            }
+
 
         this.logger.log("Done shooting rays.");
         this.logger.log("Wating for results...");
