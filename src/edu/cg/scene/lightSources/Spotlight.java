@@ -1,6 +1,8 @@
 package edu.cg.scene.lightSources;
 
+import edu.cg.algebra.Ops;
 import edu.cg.algebra.Point;
+import edu.cg.algebra.Ray;
 import edu.cg.algebra.Vec;
 
 public class Spotlight extends PointLight {
@@ -8,6 +10,7 @@ public class Spotlight extends PointLight {
 	
 	public Spotlight initDirection(Vec direction) {
 		this.direction = direction;
+		this.direction.normalize();
 		return this;
 	}
 	
@@ -25,14 +28,21 @@ public class Spotlight extends PointLight {
 	}
 	
 	@Override
-	public Spotlight initIntensity(Vec intensity) {
-		return (Spotlight)super.initIntensity(intensity);
-	}
+	public Spotlight initIntensity(Vec intensity) { return (Spotlight)super.initIntensity(intensity); }
 	
 	@Override
 	public Spotlight initDecayFactors(double q, double l, double c) {
 		return (Spotlight)super.initDecayFactors(q, l, c);
 	}
-	
-	//TODO: add some methods
+
+    @Override
+    public Vec intensity(Point hittingPoint, Ray rayToLight) {
+	    Vec D = this.direction.neg();
+	    Vec V = rayToLight.direction().normalize(); // TODO check if needed
+        double dotVD = D.dot(V);
+
+        if(dotVD < Ops.epsilon) return new Vec(0,0,0);
+
+        return super.intensity(hittingPoint, rayToLight).mult(dotVD);
+    }
 }
