@@ -41,7 +41,7 @@ public class Spotlight extends PointLight {
     @Override
     public Vec intensity(Point hittingPoint, Ray rayToLight) {
         Vec D = direction.neg();
-        Vec V = rayToLight.direction().normalize(); // TODO check if needed
+        Vec V = rayToLight.direction().normalize();
         double dotVD = D.dot(V);
 
         if (dotVD < Ops.epsilon) return new Vec(0, 0, 0);
