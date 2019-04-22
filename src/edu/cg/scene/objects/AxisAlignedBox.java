@@ -80,7 +80,7 @@ public class AxisAlignedBox extends Shape {
         private Vec dir;
         private double minT;
         private double maxT;
-        Boolean isWithin = false;
+        private boolean isWithin = false;
 
         public IntersectingT(Point start, Vec dir) {
             this.start = start;
@@ -95,8 +95,6 @@ public class AxisAlignedBox extends Shape {
             double[] direction = dir.asArray();
             double[] minPointArr = minPoint.asArray();
             double[] maxPointArr = maxPoint.asArray();
-            minT = -Ops.infinity;
-            maxT = Ops.infinity;
 
             for (int i = 0; i < 3; i++) {
                 if (direction[i] == 0) {
@@ -104,10 +102,10 @@ public class AxisAlignedBox extends Shape {
                     break;
                 }
 
-                if (direction[i] < Ops.epsilon && (startPoint[i] < minPointArr[i] || startPoint[i] > maxPointArr[i])) {
-                    minT = Double.NaN;
-                    break;
-                }
+          //      if (direction[i] < Ops.epsilon && (startPoint[i] < minPointArr[i] || startPoint[i] > maxPointArr[i])) {
+          //          minT = Double.NaN;
+          //          break;
+           //     }
 
                 double tempT1 = calcT(minPointArr[i], startPoint[i], direction[i]);
                 double tempT2 = calcT(maxPointArr[i], startPoint[i], direction[i]);
@@ -142,27 +140,28 @@ public class AxisAlignedBox extends Shape {
 
         public Vec getNormal() {
             Point p = start.add(minT, dir);
+            Vec norm = null;
 
-            if (Math.abs(p.z - minPoint.z) <= Ops.epsilon) {
-                return new Vec(0.0, 0.0, -1.0);
+            if (Math.abs(p.z - minPoint.z) < Ops.epsilon) {
+                norm = new Vec(0.0, 0.0, -1.0);
             }
-            if (Math.abs(p.z - maxPoint.z) <= Ops.epsilon) {
-                return new Vec(0.0, 0.0, 1.0);
+            else if (Math.abs(p.z - maxPoint.z) < Ops.epsilon) {
+                norm = new Vec(0.0, 0.0, 1.0);
             }
-            if (Math.abs(p.y - minPoint.y) <= Ops.epsilon) {
-                return new Vec(0.0, -1.0, 0.0);
+            else if (Math.abs(p.y - minPoint.y) < Ops.epsilon) {
+                norm = new Vec(0.0, -1.0, 0.0);
             }
-            if (Math.abs(p.y - maxPoint.y) <= Ops.epsilon) {
-                return new Vec(0.0, 1.0, 0.0);
+            else if (Math.abs(p.y - maxPoint.y) < Ops.epsilon) {
+                norm = new Vec(0.0, 1.0, 0.0);
             }
-            if (Math.abs(p.x - minPoint.x) <= Ops.epsilon) {
-                return new Vec(-1.0, 0.0, 0.0);
+            else if (Math.abs(p.x - minPoint.x) < Ops.epsilon) {
+                norm = new Vec(-1.0, 0.0, 0.0);
             }
-            if (Math.abs(p.x - maxPoint.x) <= Ops.epsilon) {
-                return new Vec(1.0, 0.0, 0.0);
+            else if (Math.abs(p.x - maxPoint.x) < Ops.epsilon) {
+                norm = new Vec(1.0, 0.0, 0.0);
             }
 
-            return null;
+            return norm;
         }
 
 
