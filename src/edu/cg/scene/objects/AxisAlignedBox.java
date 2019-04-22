@@ -1,5 +1,6 @@
 package edu.cg.scene.objects;
 
+import com.google.gson.internal.bind.MapTypeAdapterFactory;
 import edu.cg.UnimplementedMethodException;
 import edu.cg.algebra.*;
 import edu.cg.scene.camera.PinholeCamera;
@@ -80,21 +81,22 @@ public class AxisAlignedBox extends Shape {
         private Vec dir;
         private double minT;
         private double maxT;
-        private boolean isWithin = false;
+        private boolean isWithin;
 
         public IntersectingT(Point start, Vec dir) {
             this.start = start;
             this.dir = dir;
-            minT = -Ops.infinity;
-            maxT = Ops.infinity;
-            calcMinT();
+            minT = calcMinT();
+            isWithin = checkIsWithin();
         }
 
-        public void calcMinT() {
+        public double calcMinT() {
             double[] startPoint = start.asArray();
             double[] direction = dir.asArray();
             double[] minPointArr = minPoint.asArray();
             double[] maxPointArr = maxPoint.asArray();
+            minT = -Ops.infinity;
+            maxT = Ops.infinity;
 
             for (int i = 0; i < 3; i++) {
                 if (direction[i] == 0) {
@@ -102,10 +104,11 @@ public class AxisAlignedBox extends Shape {
                     break;
                 }
 
-          //      if (direction[i] < Ops.epsilon && (startPoint[i] < minPointArr[i] || startPoint[i] > maxPointArr[i])) {
-          //          minT = Double.NaN;
-          //          break;
-           //     }
+                //Todo remove?
+          //      if (Math.abs(direction[i]) < Ops.epsilon && (startPoint[i] < minPointArr[i] || startPoint[i] > maxPointArr[i])) {
+           //         minT = Double.NaN;
+           //         break;
+             //   }
 
                 double tempT1 = calcT(minPointArr[i], startPoint[i], direction[i]);
                 double tempT2 = calcT(maxPointArr[i], startPoint[i], direction[i]);
@@ -124,12 +127,9 @@ public class AxisAlignedBox extends Shape {
                     minT = Double.NaN;
                     break;
                 }
-
-                if (minT < Ops.epsilon) {
-                    minT = maxT;
-                    isWithin = true;
-                }
             }
+
+            return minT;
         }
 
         public double getMinT() {
@@ -164,6 +164,14 @@ public class AxisAlignedBox extends Shape {
             return norm;
         }
 
+        private boolean checkIsWithin() {
+            if (minT < Ops.epsilon) {
+                minT = maxT;
+                isWithin = true;
+            }
+
+            return isWithin;
+        }
 
         private double calcT(double box, double start, double direction) {
             //TODO MIKREI KATZEH
