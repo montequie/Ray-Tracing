@@ -9,7 +9,7 @@ public class DirectionalLight extends Light {
     private Vec direction = new Vec(0, -1, -1);
 
     public DirectionalLight initDirection(Vec direction) {
-        this.direction = direction;
+        this.direction = direction.normalize();
         return this;
     }
 
@@ -22,7 +22,7 @@ public class DirectionalLight extends Light {
 
     @Override
     public DirectionalLight initIntensity(Vec intensity) {
-        return (DirectionalLight) super.initIntensity(intensity);
+        return (DirectionalLight)super.initIntensity(intensity);
     }
 
     @Override
@@ -40,5 +40,4 @@ public class DirectionalLight extends Light {
         return intensity;
     }
 
-    //TODO: add some methods
 }
