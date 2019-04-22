@@ -34,7 +34,7 @@ public class Sphere extends Shape {
 
     @Override
     public Hit intersect(Ray ray) {
-        double b = 2.0 * ray.direction().dot(ray.source().sub(center)); //TODO check 2.0 *
+        double b = 2.0 * ray.direction().dot(ray.source().sub(center));
         double c = ray.source().distSqr(center) - Math.pow(radius, 2.0);
         double sqr = Math.pow(b, 2.0) - 4 * c;
 
@@ -48,15 +48,13 @@ public class Sphere extends Shape {
         if (t1 < Ops.epsilon) return null;
 
         Vec normalToSurface;
-        Boolean isWithin; //Todo Check if needed
-
-        // If t2 is negative chose t1, otherwise t2 is the minimum
+        // If t2 is negative choose t1, otherwise t2 is the minimum
         if (t2 < Ops.epsilon) {
-            normalToSurface = ray.add(t1).sub(center).normalize();
-            return new Hit(t1, normalToSurface);
+            normalToSurface = ray.add(t1).sub(center).normalize().neg();
+            return new Hit(t1, normalToSurface).setIsWithin(true);
         } else {
             normalToSurface = ray.add(t2).sub(center).normalize();
-            return new Hit(t2, normalToSurface);
+            return new Hit(t2, normalToSurface).setIsWithin(false);
         }
     }
 }
