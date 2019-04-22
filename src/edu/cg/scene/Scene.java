@@ -119,8 +119,6 @@ public class Scene {
 
     private void initSomeFields(int imgWidth, int imgHeight, Logger logger) {
         this.logger = logger;
-        //TODO: initialize your additional field here.
-        //      You can also change the method signature if needed.
     }
 
 
@@ -146,8 +144,8 @@ public class Scene {
         for (int y = 0; y < imgHeight; ++y)
             for (int x = 0; x < imgWidth; ++x) {
                 // TODO: remove
-                Ray ray = new Ray(camera.getCameraPosition(), camera.transform(x, y));
-                Vec color = calcColor(ray, 0);
+//                Ray ray = new Ray(camera.getCameraPosition(), camera.transform(x, y));
+//                Vec color = calcColor(ray, 0);
                 futures[y][x] = calcColor(x, y);
             }
 
@@ -215,21 +213,17 @@ public class Scene {
             // the reflection coefficient for the material
             double K_R = hittingSurface.reflectionIntensity();
             // recursive call calcColor for the reflected ray
-            Vec reflectedColor = calcColor(reflectRay, recusionLevel + 1).mult(new Vec(K_R));
-            color = color.add(reflectedColor);
+            color = color.add(calcColor(reflectRay, recusionLevel + 1).mult(new Vec(K_R)));
         }
-
         if (renderRefarctions && hittingSurface.isTransparent()) {
-            double n1 = hittingSurface.n1(closetHit);
-            double n2 = hittingSurface.n2(closetHit);
-            Vec refractionDirection = Ops.refract(L, N, n1, n2);
-            Ray refractRay = new Ray(hittingPoint, refractionDirection);
-            // the transparency coefficient
-            double K_T = hittingSurface.refractionIntensity();
-            Vec refractionColor = calcColor(refractRay, recusionLevel + 1).mult(new Vec(K_T));
-            color = color.add(refractionColor);
+                double n1 = hittingSurface.n1(closetHit);
+                double n2 = hittingSurface.n2(closetHit);
+                Vec refractionDirection = Ops.refract(L, N, n1, n2);
+                Ray refractRay = new Ray(hittingPoint, refractionDirection);
+                // the transparency coefficient
+                double K_T = hittingSurface.refractionIntensity();
+                color = color.add(calcColor(refractRay, recusionLevel + 1).mult(new Vec(K_T)));
         }
-
         return color;
     }
 
@@ -238,7 +232,6 @@ public class Scene {
         Hit closetHit = null;
         // find the first (closet) surface intersected by the ray
         for (Surface s : surfaces) {
-            // TODO: make sure to setSurface
             Hit hit = s.intersect(ray);
             closetHit = (closetHit == null) ? hit : closetHit;
             if (hit != null)
