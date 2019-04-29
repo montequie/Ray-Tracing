@@ -143,9 +143,6 @@ public class Scene {
 
         for (int y = 0; y < imgHeight; ++y)
             for (int x = 0; x < imgWidth; ++x) {
-                // TODO: remove
-                Ray ray = new Ray(camera.getCameraPosition(), camera.transform(x, y));
-                Vec color = calcColor(ray, 0);
                 futures[y][x] = calcColor(x, y);
             }
 
@@ -171,8 +168,6 @@ public class Scene {
 
     private Future<Color> calcColor(int x, int y) {
         return executor.submit(() -> {
-            // TODO: You need to re-implement this method if you want to handle
-            //       super-sampling. You're also free to change the given implementation as you like.
             Point centerPoint = camera.transform(x, y);
             Ray ray = new Ray(camera.getCameraPosition(), centerPoint);
             Vec color = calcColor(ray, 0);
@@ -216,13 +211,13 @@ public class Scene {
             color = color.add(calcColor(reflectRay, recusionLevel + 1).mult(new Vec(K_R)));
         }
         if (renderRefarctions && hittingSurface.isTransparent()) {
-                double n1 = hittingSurface.n1(closetHit);
-                double n2 = hittingSurface.n2(closetHit);
-                Vec refractionDirection = Ops.refract(L, N, n1, n2);
-                Ray refractRay = new Ray(hittingPoint, refractionDirection);
-                // the transparency coefficient
-                double K_T = hittingSurface.refractionIntensity();
-                color = color.add(calcColor(refractRay, recusionLevel + 1).mult(new Vec(K_T)));
+            double n1 = hittingSurface.n1(closetHit);
+            double n2 = hittingSurface.n2(closetHit);
+            Vec refractionDirection = Ops.refract(L, N, n1, n2);
+            Ray refractRay = new Ray(hittingPoint, refractionDirection);
+            // the transparency coefficient
+            double K_T = hittingSurface.refractionIntensity();
+            color = color.add(calcColor(refractRay, recusionLevel + 1).mult(new Vec(K_T)));
         }
         return color;
     }
@@ -240,17 +235,6 @@ public class Scene {
         return closetHit;
     }
 
-
-    /**
-     * represents light emanating directly from an object
-     *
-     * @param hittingPoint
-     * @return
-     */
-    private Vec calcEmissionColor(Light l, Point hittingPoint, Ray rayToLight) {
-        // TODO: delete if not needed
-        throw new UnimplementedMethodException("calcEmissionColor");
-    }
 
     /**
      * @param s - the surface
@@ -292,7 +276,6 @@ public class Scene {
         // n defines the shininess constant for this material.
         int n = closetHit.getSurface().shininess();
         double VR = R.dot(V.neg());
-        // TODO: if VR < 0.0
         return K_s.mult(Math.pow(R.dot(V.neg()), n));
     }
 

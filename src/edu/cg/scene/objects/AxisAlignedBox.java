@@ -66,7 +66,7 @@ public class AxisAlignedBox extends Shape {
 
         boolean isWithin = t.getIsWithin();
         Vec normal = t.getNormal();
-        if(isWithin) {
+        if (isWithin) {
             normal = normal.neg();
         }
 
@@ -101,9 +101,9 @@ public class AxisAlignedBox extends Shape {
 
             for (int i = 0; i < 3; i++) {
                 if (Math.abs(direction[i]) <= Ops.epsilon) {
-                	if(minPointArr[i] > startPoint[i] || startPoint[i] > maxPointArr[i]){
-						return Double.NaN;
-					}
+                    if (minPointArr[i] > startPoint[i] || startPoint[i] > maxPointArr[i]) {
+                        return Double.NaN;
+                    }
                 }
 
                 double tempT1 = calcT(minPointArr[i], startPoint[i], direction[i]);
@@ -119,7 +119,7 @@ public class AxisAlignedBox extends Shape {
                     maxT = tempMax;
                 }
 
-                if ((minT > maxT) || (maxT < Ops.epsilon)) return  Double.NaN;
+                if ((minT > maxT) || (maxT < Ops.epsilon)) return Double.NaN;
 
             }
 
@@ -127,7 +127,6 @@ public class AxisAlignedBox extends Shape {
         }
 
         /**
-         *
          * @return - minT, the intersecting parameter with the box
          */
         public double getMinT() {
@@ -137,10 +136,13 @@ public class AxisAlignedBox extends Shape {
         /**
          * @return true if the point is within the box
          */
-        public boolean getIsWithin() { return isWithin; }
+        public boolean getIsWithin() {
+            return isWithin;
+        }
 
         /**
          * Checks which face of the box is intersected and returns the normal to the face
+         *
          * @return
          */
         public Vec getNormal() {
@@ -149,31 +151,27 @@ public class AxisAlignedBox extends Shape {
 
             if (Math.abs(p.z - minPoint.z) < Ops.epsilon) {
                 norm = new Vec(0.0, 0.0, -1.0);
-            }
-            else if (Math.abs(p.z - maxPoint.z) < Ops.epsilon) {
+            } else if (Math.abs(p.z - maxPoint.z) < Ops.epsilon) {
                 norm = new Vec(0.0, 0.0, 1.0);
-            }
-            else if (Math.abs(p.y - minPoint.y) < Ops.epsilon) {
+            } else if (Math.abs(p.y - minPoint.y) < Ops.epsilon) {
                 norm = new Vec(0.0, -1.0, 0.0);
-            }
-            else if (Math.abs(p.y - maxPoint.y) < Ops.epsilon) {
+            } else if (Math.abs(p.y - maxPoint.y) < Ops.epsilon) {
                 norm = new Vec(0.0, 1.0, 0.0);
-            }
-            else if (Math.abs(p.x - minPoint.x) < Ops.epsilon) {
+            } else if (Math.abs(p.x - minPoint.x) < Ops.epsilon) {
                 norm = new Vec(-1.0, 0.0, 0.0);
-            }
-            else if (Math.abs(p.x - maxPoint.x) < Ops.epsilon) {
+            } else if (Math.abs(p.x - maxPoint.x) < Ops.epsilon) {
                 norm = new Vec(1.0, 0.0, 0.0);
             }
 
             return norm;
         }
 
-		/**
-		 * Checks if the point lies within the box, if so replaces minT with maxT
-		 * @return true if the point is within the box
-		 */
-		private boolean checkIsWithin() {
+        /**
+         * Checks if the point lies within the box, if so replaces minT with maxT
+         *
+         * @return true if the point is within the box
+         */
+        private boolean checkIsWithin() {
             if (minT < Ops.epsilon) {
                 minT = maxT;
                 isWithin = true;
