@@ -1,9 +1,6 @@
 package edu.cg.scene.objects;
 
-import com.google.gson.internal.bind.MapTypeAdapterFactory;
-import edu.cg.UnimplementedMethodException;
 import edu.cg.algebra.*;
-import edu.cg.scene.camera.PinholeCamera;
 
 public class AxisAlignedBox extends Shape {
     private Point minPoint;
@@ -76,6 +73,10 @@ public class AxisAlignedBox extends Shape {
         return new Hit(minT, normal).setIsWithin(isWithin);
     }
 
+    /**
+     * Class that receives a point and a vector and returns the  vectors intersecting parameter t
+     * with an axis aligned box
+     */
     public class IntersectingT {
         private Point start;
         private Vec dir;
@@ -100,14 +101,10 @@ public class AxisAlignedBox extends Shape {
 
             for (int i = 0; i < 3; i++) {
                 if (Math.abs(direction[i]) <= Ops.epsilon) {
-                	if(minPointArr[i] <= startPoint[i] && startPoint[i] <= maxPointArr[i]){
-                		continue;
-					}
-                	else {
+                	if(minPointArr[i] > startPoint[i] || startPoint[i] > maxPointArr[i]){
 						return Double.NaN;
 					}
                 }
-
 
                 double tempT1 = calcT(minPointArr[i], startPoint[i], direction[i]);
                 double tempT2 = calcT(maxPointArr[i], startPoint[i], direction[i]);
@@ -129,12 +126,23 @@ public class AxisAlignedBox extends Shape {
             return minT;
         }
 
+        /**
+         *
+         * @return - minT, the intersecting parameter with the box
+         */
         public double getMinT() {
             return minT;
         }
 
+        /**
+         * @return true if the point is within the box
+         */
         public boolean getIsWithin() { return isWithin; }
 
+        /**
+         * Checks which face of the box is intersected and returns the normal to the face
+         * @return
+         */
         public Vec getNormal() {
             Point p = start.add(minT, dir);
             Vec norm = null;
@@ -162,8 +170,8 @@ public class AxisAlignedBox extends Shape {
         }
 
 		/**
-		 * 
-		 * @return
+		 * Checks if the point lies within the box, if so replaces minT with maxT
+		 * @return true if the point is within the box
 		 */
 		private boolean checkIsWithin() {
             if (minT < Ops.epsilon) {
