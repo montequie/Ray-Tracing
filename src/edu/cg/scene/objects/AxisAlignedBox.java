@@ -99,16 +99,15 @@ public class AxisAlignedBox extends Shape {
             maxT = Ops.infinity;
 
             for (int i = 0; i < 3; i++) {
-                if (direction[i] == 0) {
-                    minT = Double.NaN;
-                    break;
+                if (Math.abs(direction[i]) <= Ops.epsilon) {
+                	if(minPointArr[i] <= startPoint[i] && startPoint[i] <= maxPointArr[i]){
+                		continue;
+					}
+                	else {
+						return Double.NaN;
+					}
                 }
 
-                //Todo remove?
-          //      if (Math.abs(direction[i]) < Ops.epsilon && (startPoint[i] < minPointArr[i] || startPoint[i] > maxPointArr[i])) {
-           //         minT = Double.NaN;
-           //         break;
-             //   }
 
                 double tempT1 = calcT(minPointArr[i], startPoint[i], direction[i]);
                 double tempT2 = calcT(maxPointArr[i], startPoint[i], direction[i]);
@@ -123,13 +122,8 @@ public class AxisAlignedBox extends Shape {
                     maxT = tempMax;
                 }
 
-//                if (minT > maxT || maxT < Ops.epsilon) {
-                if (!(minT > maxT) && !(maxT < Ops.epsilon)) continue;
-                return Double.NaN;
-//                {
-//                    minT = Double.NaN;
-//                    break;
-//                }
+                if ((minT > maxT) || (maxT < Ops.epsilon)) return  Double.NaN;
+
             }
 
             return minT;
@@ -167,7 +161,11 @@ public class AxisAlignedBox extends Shape {
             return norm;
         }
 
-        private boolean checkIsWithin() {
+		/**
+		 * 
+		 * @return
+		 */
+		private boolean checkIsWithin() {
             if (minT < Ops.epsilon) {
                 minT = maxT;
                 isWithin = true;
@@ -177,7 +175,6 @@ public class AxisAlignedBox extends Shape {
         }
 
         private double calcT(double box, double start, double direction) {
-            //TODO MIKREI KATZEH
             return (box - start) / direction;
         }
     }
