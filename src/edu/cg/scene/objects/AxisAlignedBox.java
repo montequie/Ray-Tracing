@@ -123,10 +123,13 @@ public class AxisAlignedBox extends Shape {
                     maxT = tempMax;
                 }
 
-                if (minT > maxT || maxT < Ops.epsilon) {
-                    minT = Double.NaN;
-                    break;
-                }
+//                if (minT > maxT || maxT < Ops.epsilon) {
+                if (!(minT > maxT) && !(maxT < Ops.epsilon)) continue;
+                return Double.NaN;
+//                {
+//                    minT = Double.NaN;
+//                    break;
+//                }
             }
 
             return minT;

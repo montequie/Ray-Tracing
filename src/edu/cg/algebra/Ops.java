@@ -55,7 +55,8 @@ public class Ops {
 	}
 	
 	public static Vec normalize(Vec v) {
-		return mult(1.0/norm(v), v);
+		return norm(v) == 0 ? v : mult(1.0/norm(v), v);
+		//		return mult(1.0/norm(v), v);
 	}
 	
 	public static Vec neg(Vec v) {

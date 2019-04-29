@@ -144,8 +144,8 @@ public class Scene {
         for (int y = 0; y < imgHeight; ++y)
             for (int x = 0; x < imgWidth; ++x) {
                 // TODO: remove
-//                Ray ray = new Ray(camera.getCameraPosition(), camera.transform(x, y));
-//                Vec color = calcColor(ray, 0);
+                Ray ray = new Ray(camera.getCameraPosition(), camera.transform(x, y));
+                Vec color = calcColor(ray, 0);
                 futures[y][x] = calcColor(x, y);
             }
 
